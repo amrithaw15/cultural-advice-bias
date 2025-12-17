@@ -1,4 +1,4 @@
-# Cultural Therapy Bias Visualization
+# Cultural Advice Bias Visualization
 
 An interactive visualization tool that analyzes and displays epistemic erasure and cultural bias in therapy recommendations across different cultural backgrounds (Filipino, Indian, and Nigerian).
 
