@@ -46,8 +46,8 @@ cultural-therapy-bias/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/cultural-therapy-bias.git
-cd cultural-therapy-bias
+git clone https://github.com/YOUR_USERNAME/cultural-advice-bias.git
+cd cultural-advice-bias
 ```
 
 ### 2. Install Dependencies
