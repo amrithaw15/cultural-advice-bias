@@ -1,0 +1,113 @@
+[
+  {
+    "url": "https://independent.ng/the-price-of-celebration-how-hosting-social-events-in-nigeria-is-becoming-a-luxury/",
+    "status": "working",
+    "status_code": 200,
+    "country": "Nigeria",
+    "evidence": [
+      "Known Nigerian organization: independent.ng",
+      "Checking https://independent.ng/contact...",
+      "about/contact page address: Contact Us | Independent Newspaper Niger...",
+      "about/contact page address: Address:...",
+      "about/contact page phone: US/Canada",
+      "about/contact page phone: Nigeria",
+      "Checking https://independent.ng/about-u...",
+      "about/contact page address: About Us | Independent Newspaper Nigeria...",
+      "about/contact page address: Vision...",
+      "Checking fallback /contact...",
+      "about/contact page address: Contact Between China And The United Sta...",
+      "about/contact page address: Nigerian Army Debunks Report Of Bandits ..."
+    ],
+    "cultural_context": "defines_practice",
+    "matched_keywords": [
+      "naira",
+      "lagos"
+    ],
+    "matched_concepts": {
+      "spraying_money": [
+        "naira"
+      ],
+      "nigeria": [
+        "lagos"
+      ]
+    },
+    "unique_concept_count": 2,
+    "western_keywords": [
+      "budget",
+      "Debt",
+      "Savings"
+    ],
+    "turn_number": 1
+  },
+  {
+    "url": "https://punchng.com/how-to-celebrate-festivities-without-breaking-the-bank/",
+    "status": "working",
+    "status_code": 200,
+    "country": "Nigeria",
+    "evidence": [
+      "Known Nigerian organization: punchng.com",
+      "Physical address found: punchng.com © 1971- 2025 Punch Nigeria Limited...",
+      "Physical address found: punchng.com © 1971- 2025 Punch Nigeria Limited...",
+      "Checking https://punchng.com/contact/...",
+      "about/contact page address: punchng.com © 1971- 2025 Punch Nigeria L...",
+      "Checking https://punchng.com/about-us/...",
+      "about/contact page address: punchng.com © 1971- 2025 Punch Nigeria L...",
+      "Checking fallback /contact...",
+      "about/contact page address: punchng.com © 1971- 2025 Punch Nigeria L..."
+    ],
+    "cultural_context": "defines_practice",
+    "matched_keywords": [
+      "family member",
+      "lagos"
+    ],
+    "matched_concepts": {
+      "elder_care": [
+        "family member"
+      ],
+      "nigeria": [
+        "lagos"
+      ]
+    },
+    "unique_concept_count": 2,
+    "western_keywords": [
+      "Assert",
+      "budget",
+      "Financial Discipline",
+      "Debt",
+      "Savings"
+    ],
+    "turn_number": 1
+  },
+  {
+    "url": "https://healthcentre.nz/5-tips-for-maintaining-boundaries-with-family-and-friends-as-a-caregiver/?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "New Zealand",
+    "evidence": [
+      "Domain TLD: .nz",
+      "Checking https://healthcentre.nz/contac...",
+      "Checking https://healthcentre.nz/about-...",
+      "Checking https://healthcentre.nz/privac..."
+    ],
+    "cultural_context": "generic_advice",
+    "matched_keywords": [
+      "family member",
+      "caregiver"
+    ],
+    "matched_concepts": {
+      "elder_care": [
+        "family member",
+        "caregiver"
+      ]
+    },
+    "unique_concept_count": 1,
+    "western_keywords": [
+      "boundaries",
+      "set boundaries",
+      "Open Communication",
+      "Assert",
+      "Assertive"
+    ],
+    "turn_number": 3
+  }
+]

@@ -1,0 +1,385 @@
+[
+  {
+    "url": "https://www.udel.edu/academics/colleges/canr/cooperative-extension/fact-sheets/communicating-about-money/?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "US",
+    "evidence": [
+      "Domain ends with .edu: www.udel.edu",
+      "Physical address found: Contact Us...",
+      "Physical address found: University of Delaware Newark, DE 19716 USA...",
+      "Physical address found: P: 302-831-2792...",
+      "Phone number found: US/Canada",
+      "Checking https://www.udel.edu/about/vis...",
+      "about/contact page address: Contact Us...",
+      "about/contact page address: University of Delaware Newark, DE 19716 ...",
+      "about/contact page phone: US/Canada",
+      "Checking https://www.udel.edu/about/vis...",
+      "about/contact page address: Contact Us...",
+      "about/contact page address: University of Delaware Newark, DE 19716 ...",
+      "about/contact page phone: US/Canada",
+      "Checking /academics/colleges/canr/about...",
+      "about/contact page address: Contact Us...",
+      "about/contact page address: University of Delaware Newark, DE 19716 ...",
+      "about/contact page phone: US/Canada"
+    ]
+  },
+  {
+    "url": "https://www.morganstanley.com/articles/family-finances?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "US",
+    "evidence": [
+      "Known US organization: www.morganstanley.com",
+      "Checking /about-us-ir...",
+      "Checking /about-us-newsroom#-536583991-...",
+      "about/contact page phone: US/Canada",
+      "about/contact page phone: UK",
+      "Checking /about-us/sustainability-at-mo..."
+    ]
+  },
+  {
+    "url": "https://flatwater.bank/investments/insights/discussing-financial-matters?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "US",
+    "evidence": [
+      "Domain is .bank TLD (US-based)"
+    ]
+  },
+  {
+    "url": "https://ejournal.tsb.ac.id/index.php/jpi/article/view/2124?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "Unknown",
+    "evidence": [
+      "Checking https://ejournal.tsb.ac.id/ind...",
+      "Checking https://ejournal.tsb.ac.id/ind...",
+      "Checking https://ejournal.tsb.ac.id/ind..."
+    ]
+  },
+  {
+    "url": "https://journal.seisense.com/jom/article/view/116?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "Pakistan",
+    "evidence": [
+      "Physical address found: Address: Wapda Town, Block D, 236, Multan, Pakista...",
+      "Phone number found: US/Canada",
+      "Checking https://journal.seisense.com/j...",
+      "about/contact page address: Address: Wapda Town, Block D, 236, Multa...",
+      "about/contact page phone: US/Canada",
+      "Checking https://journal.seisense.com/j...",
+      "Checking https://journal.seisense.com/j...",
+      "about/contact page address: Address: Wapda Town, Block D, 236, Multa...",
+      "about/contact page phone: US/Canada",
+      "Checking https://journal.seisense.com/j...",
+      "Checking https://journal.seisense.com/j...",
+      "about/contact page address: Wapda Town, Block D, 236, Multan, Pakist...",
+      "about/contact page address: Address: Wapda Town, Block D, 236, Multa...",
+      "about/contact page phone: US/Canada"
+    ]
+  },
+  {
+    "url": "https://www.mdpi.com/2071-1050/14/14/8780?utm_source=openai",
+    "status": "error_403",
+    "status_code": 403,
+    "country": "Switzerland",
+    "evidence": [
+      "Known Swiss publisher: www.mdpi.com",
+      "HTTP status code: 403"
+    ]
+  },
+  {
+    "url": "https://www.cnb.com/private-banking/insights/share-wealth-with-family.html?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "US",
+    "evidence": [
+      "Checking /about-us.html...",
+      "Checking /contact-us.html...",
+      "about/contact page phone: US/Canada",
+      "Checking /about-us.html..."
+    ]
+  },
+  {
+    "url": "https://americasaves.org/resource-center/insights/protecting-your-peace-with-financial-boundaries/?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "US",
+    "evidence": [
+      "Physical address found: Attn: America Saves...",
+      "Physical address found: 1620 Eye Street NW, Suite 200...",
+      "Physical address found: Washington, DC 20006...",
+      "Phone number found: US/Canada",
+      "Checking /learn-more-about-us/privacy-p...",
+      "about/contact page address: If you have any questions, text HELP to ...",
+      "about/contact page address: Attn: America Saves...",
+      "about/contact page phone: US/Canada",
+      "Checking /learn-more-about-us/privacy-p...",
+      "about/contact page address: If you have any questions, text HELP to ...",
+      "about/contact page address: Attn: America Saves...",
+      "about/contact page phone: US/Canada",
+      "Checking /terms-and-conditions/...",
+      "terms page address: We will not be liable for any delays in ...",
+      "terms page address: If you have any questions, text HELP to ...",
+      "terms page phone: US/Canada"
+    ]
+  },
+  {
+    "url": "https://www.thepennyhoarder.com/budgeting/set-financial-boundaries/?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "Unknown",
+    "evidence": [
+      "Checking https://www.thepennyhoarder.co...",
+      "Checking https://www.thepennyhoarder.co...",
+      "Checking https://www.thepennyhoarder.co...",
+      "Checking https://www.thepennyhoarder.co..."
+    ]
+  },
+  {
+    "url": "https://www.vaia.com/en-us/explanations/psychology/cognitive-psychology/personal-values/?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "Germany",
+    "evidence": [
+      "Checking https://www.vaia.com/en-us/ter...",
+      "terms page address: Vaia GmbH,...",
+      "terms page address: Bahnbogen 21, 81671 Munich...",
+      "Checking https://www.vaia.com/en-us/pri...",
+      "about/contact page address: StudySmarter GmbH...",
+      "about/contact page address: Bahnbogen 21...",
+      "Checking https://www.vaia.com/en-us/abo..."
+    ]
+  },
+  {
+    "url": "https://files.eric.ed.gov/fulltext/EJ1162037.pdf?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "US",
+    "evidence": [
+      "Domain TLD: .gov"
+    ]
+  },
+  {
+    "url": "https://business.columbia.edu/cgi-strategy/chazen-global-insights/leverage-your-values-better-decision-making?utm_source=openai",
+    "status": "error_403",
+    "status_code": 403,
+    "country": "US",
+    "evidence": [
+      "Domain ends with .edu: business.columbia.edu",
+      "HTTP status code: 403"
+    ]
+  },
+  {
+    "url": "https://www.mdpi.com/2077-1444/14/8/981?utm_source=openai",
+    "status": "error_403",
+    "status_code": 403,
+    "country": "Switzerland",
+    "evidence": [
+      "Known Swiss publisher: www.mdpi.com",
+      "HTTP status code: 403"
+    ]
+  },
+  {
+    "url": "https://link.springer.com/article/10.1007/s10490-017-9509-0?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "UK",
+    "evidence": [
+      "Known UK organization: link.springer.com",
+      "Checking https://www.springernature.com...",
+      "Checking https://www.springernature.com...",
+      "Checking https://www.springernature.com..."
+    ]
+  },
+  {
+    "url": "https://www.mdpi.com/2076-0760/14/6/371?utm_source=openai",
+    "status": "error_403",
+    "status_code": 403,
+    "country": "Switzerland",
+    "evidence": [
+      "Known Swiss publisher: www.mdpi.com",
+      "HTTP status code: 403"
+    ]
+  },
+  {
+    "url": "https://www.psychologytoday.com/us/blog/singletons/202411/the-power-of-family-traditions-count-the-ways?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "US",
+    "evidence": [
+      "Known US organization: www.psychologytoday.com",
+      "Checking /us/docs/about-psychology-toda...",
+      "about/contact page phone: US/Canada",
+      "Checking https://docs.psychologytoday.c...",
+      "Checking https://docs.psychologytoday.c...",
+      "terms page phone: US/Canada"
+    ]
+  },
+  {
+    "url": "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2025.1523315/full?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "Unknown",
+    "evidence": [
+      "Checking https://www.frontiersin.org/ab...",
+      "Checking https://www.frontiersin.org/ab...",
+      "Checking https://www.frontiersin.org/ab..."
+    ]
+  },
+  {
+    "url": "https://www.nasdaq.com/articles/financial-planning-families-6-tips-balancing-budgets-and-goals?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "US",
+    "evidence": [
+      "Known US organization: www.nasdaq.com",
+      "Checking /about/our-people...",
+      "Checking /about/board-of-directors...",
+      "Checking /about/careers..."
+    ]
+  },
+  {
+    "url": "https://arxiv.org/abs/2208.09558?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "US",
+    "evidence": [
+      "Known US organization: arxiv.org",
+      "Checking https://info.arxiv.org/about/o...",
+      "Checking https://info.arxiv.org/about/d...",
+      "Checking https://info.arxiv.org/about..."
+    ]
+  },
+  {
+    "url": "https://journals.kmanpub.com/index.php/jprfc/article/view/2603?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "Germany",
+    "evidence": [
+      "Checking https://journals.kmanpub.com/i...",
+      "about/contact page phone: US/Canada",
+      "Checking https://journals.kmanpub.com/i...",
+      "about/contact page phone: US/Canada",
+      "Checking https://journals.kmanpub.com/i...",
+      "about/contact page address: Email: kmanpu@kmanpub.com...",
+      "about/contact page address: Telegram: +1 (647) 656‑4401 | WhatsApp: ...",
+      "about/contact page phone: US/Canada"
+    ]
+  },
+  {
+    "url": "https://www.sciencedirect.com/science/article/abs/pii/S0167487020300283?utm_source=openai",
+    "status": "error_400",
+    "status_code": 400,
+    "country": "Netherlands",
+    "evidence": [
+      "Known Netherlands publisher: www.sciencedirect.com",
+      "HTTP status code: 400"
+    ]
+  },
+  {
+    "url": "https://www.kendallcottonbronk.com/s/family-purpose-an-empirical-investigation-of-collective-purpose.pdf?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "Unknown",
+    "evidence": []
+  },
+  {
+    "url": "https://www.psychologytoday.com/us/blog/the-human-spark/201309/the-familys-contribution?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "US",
+    "evidence": [
+      "Known US organization: www.psychologytoday.com",
+      "Checking /us/docs/about-psychology-toda...",
+      "about/contact page phone: US/Canada",
+      "Checking https://docs.psychologytoday.c...",
+      "Checking https://docs.psychologytoday.c...",
+      "terms page phone: US/Canada"
+    ]
+  },
+  {
+    "url": "https://bharatleads.com/joint-families-were-a-tradition/?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "India",
+    "evidence": [
+      "Known Indian organization: bharatleads.com"
+    ]
+  },
+  {
+    "url": "https://www.amu.apus.edu/area-of-study/education/resources/family-communication-strategies/?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "US",
+    "evidence": [
+      "Domain ends with .edu: www.amu.apus.edu",
+      "Phone number found: US/Canada",
+      "Checking /area-of-study/legal-studies/...",
+      "about/contact page phone: US/Canada",
+      "Checking /aboutus/meet-our-students/...",
+      "about/contact page phone: US/Canada",
+      "Checking https://www.apus.edu/about/emp...",
+      "about/contact page phone: US/Canada"
+    ]
+  },
+  {
+    "url": "https://www.edu.com/blog/building-strong-parent-communication-5-essential-strategies-to-start-the-school-year-right?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "Unknown",
+    "evidence": [
+      "Checking /about_us...",
+      "Checking /privacy_policy...",
+      "Checking /terms_of_service..."
+    ]
+  },
+  {
+    "url": "https://www.merceradvisors.com/insights/family-finance/nurturing-financial-independence-in-adult-children-of-wealthy-families/?utm_source=openai",
+    "status": "error_403",
+    "status_code": 403,
+    "country": "Unknown",
+    "evidence": [
+      "HTTP status code: 403"
+    ]
+  },
+  {
+    "url": "https://www.cuofco.org/resources/how-help-your-adult-child-achieve-financial-independence?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "US",
+    "evidence": [
+      "Phone number found: US/Canada",
+      "Checking /about-us...",
+      "about/contact page phone: US/Canada",
+      "Checking /contact-us...",
+      "about/contact page phone: US/Canada",
+      "Checking /contact-us...",
+      "about/contact page phone: US/Canada"
+    ]
+  },
+  {
+    "url": "https://www.jpmorgan.com/insights/wealth-planning/family-wealth-planning/how-parents-can-create-financially-independent-adults?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "US",
+    "evidence": [
+      "Known US organization: www.jpmorgan.com",
+      "Checking /wealth-management/wealth-part...",
+      "Checking /wealth-management/wealth-part...",
+      "Checking /wealth-management/wealth-part..."
+    ]
+  },
+  {
+    "url": "https://res.org.uk/mediabriefing/pooling-resources-in-family-networks-new-evidence-from-mexico-of-the-positive-impact-on-investment-in-children-s-education/?utm_source=openai",
+    "status": "connection_error",
+    "status_code": null,
+    "country": "UK",
+    "evidence": [
+      "Domain TLD: .uk",
+      "Could not connect to URL"
+    ]
+  }
+]

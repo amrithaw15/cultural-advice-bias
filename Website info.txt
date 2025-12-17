@@ -1,0 +1,115 @@
+
+okay i made a wireframe in procreate but I don't think you will understand
+So i am going to explain it to you how I want the information to look like
+
+
+Overall:
+first of just like the cmd terminal i want the entire layout to be black or almost black color #
+The information will be written is grey color # , just general information. Information regarding India will be in neon orange. Information regarding Africa will be neon green and information regarding Philippines will be neon pink. The font will be pixel fonts we see in terminal. I do not want border lines or shadows or bounding boxes. The information will be arranged well and user has to scroll down.
+
+
+I am planning to make a total of 100 urls
+maybe 34 in india 33 in nigeria and 33 in phillipines
+
+
+Part 1:
+Heading : Epistemic Violence in AI Advice.
+write a max 2 lines (I need to think about that)
+and right user brief maybe 
+User A asks AI for advice about their current joint family situation living in west Bengal, India
+User B asks AI for  advice about their partaking of social status living in Nigeria
+User C asks AI for advice about their pre wedding arrangements with families living in Philippines
+Then a Blow up of World Map. The world map shouldn't have boundaries. it covers the whole area (kind of how these newer websites show world map). The world map is grey just like the font's. you can make the world map look cool like maybe the map has very good pixels or world map that looks like its made from dots. It can be a nice detailed map. 
+There are three icon's on top of the world map. They look like space invaders. Maybe some space invaders pixel art.  one is neon orange (represents india) one is neon green and other in neon pick. some of the world map can bleed behind these iconic three icons. they are big and captures your attention. they are next to each other and middle aligned. One is already pressed hence it is bigger than the other two. These buttons need to be intuitive. like when I put my mouse on top it should look larger and then when the user clicks it stays large. 
+by default the indian one is clicked and the world map shows locations where the indian url's are there. Now it needs to show percentage. depending on percentage it shows how big the sphere is. The sphere takes the color of the icon obv
+unknown can be in the center of the map that says unknown (maybe bermuda triangle) anyway when user hovers it shows exactly how many percentage. when hovered on top of the circle. The percentage shown in transparent  background with fat font bigger and maybe bold.
+for unknown it shows percentage and maybe one line info saying why its unknown. 'its unknown because these are personal websites or websites that couldn't be fetched with error 404, error 205 etc' something like that
+
+
+
+Part 2:
+below the world map we again have three icons (same size) three just like above are buttons.
+they are aligned in three columns and three with good spacing between each other, they occupy the entire width of the screen perfectly. The buttons above where close together but the buttons here are more seprated because each button's information will be given in rows below the button. so basically three columns.
+
+by default the indian one is clicked. so we see the indian information. the other two buttons we do not see the information in the column until they are pressed. so if the green one is pressed then we see the green one and the indian one goes. these buttons are basically same intuitive like above. The columns should not have visible lines between them. just like i don't like borders to be seen. i don't like lines to be seen either. 
+below the icons we have a small write up that run horizontally before the information in each column. these write up explains the content of what the information below is displayed is about. the write up runs throughout the horizontal line cutting across the columns. they are mid-aligned. They are basically explanation of what the column information are in percentages. So the 'write up A' (naming these A and B for your reference) will be like ' these are percentages of how accurately the AI was able to provide information that specifically addresses the users concerns. Sometimes the AI tends to talk about a cultural subject without actually getting in depth of that subject. '
+
+So since the Indian one is pressed below the icon we have generic advice:  percentage,  not related (not related needs to be framed as something else something like futherest away from user's query somthin like that) :percentage, addressed user's concern: percentage, explains concepts: percentage etc. Whichever has higher percentage will come above. that's category A
+
+now below category A we have category B. Category A and B is just for you and not to be displayed in the website.
+Again we have a write up that runs parallelly
+Write up B 'These are Anglophone Psychological frameworks that appear when the AI gives advice. these are words are often present in advice of AI systems. These words are derived too many times because they are seen as the only way of truth. for example using frameworks such as boundary, self care, individualism etc'
+and then these words are seen in percentage just like category A
+out of 33 URL how many times did the word 'boundary' come up? and these are also arranged in terms of which percentage is highest.
+
+
+Now we have category C in these columns. category C needs a write up as well running horizontally before these percentages come up. horizontal and mid aligned write up.
+ write up will look something like write up C' These are Anglophone Psychological frameworks that are present in cultural context for example: The indian user or Filipino user neutrally about joint family or staying with in-laws after marriage and the URL's that get picked up are of western frameworks such as seting boundaries, personal space, couple time, self care etc. The URL's that get picked up match to the narrative of dominant epistemic therapy frameworks or if a user in Nigeria talks about owambe parties. the narrative is about savings, being in debt if spent too much or financial responsibilities assuming that this is the correct approach for a cultural thing'
+now below that the Indian column will have how many times when cultural concepts has western words. so for example cultural concept 'joint family' has these western words. this can be percentages like out of 30% of URL's spoke about joint family but in that 70% had 'boundaries' and 30% had 'financial independence' . we need to highlight that that cultural concepts have anglophone frameworks.
+out of 100%
+30% talks about Joint Family 
+in that
+60% Boundaries
+30% Financial Independence   
+20% Budget
+Basically matching Indian specific cultural keywords with western keywords   
+
+This is part 2
+its basically
+Buttons
+Write up A (small and to the point)
+Column A
+Write up B (small and to the point)
+Column B
+Write up C (small and to the point)
+Column C
+Rememeber not to have color lines or shadows and etc. write ups can be in small fonts but the information in these columns need to be HUGE.
+
+Part 3:
+Headline : Raw Data (bold middle aligned and in center)(Gray color BIIGGG font).Basically here we show json data but polished for users and for 1 turn.
+Sub Headline: User A (Orange color font, middle aligned, BIG font)
+
+Now three buttons like before but just like part 1 and unlike part 2 these are again clos to each other. these buttons are middle aligned and closer. maintain same as part 1 buttons
+Indian one is pressed. so Indian data is shown first. even the other buttons are pressed then Nigerian ones will be shown 
+
+below that write in grey ' These model had many variations of Reponses when run multiple times, but one is displayed to deconstruct' 
+Sub Headline: turn 1 (Bold, grey, middle aligned,BIG font)
+User and chatbot response (orange)
+Sub Headline: turn 2 (Bold, grey, middle aligned,BIG font)
+user and chatbot response (orange)
+Sub Headline: turn 3 (Bold, grey, middle aligned,BIG font)
+user and chatbot response (orange)
+Sub Headline: turn 4 (Bold, grey, middle aligned,BIG font)
+user and chatbot response (orange)
+Sub Headline: turn 5 (Bold, grey, middle aligned,BIG font)
+user and chatbot response (orange)
+
+Sub Headline:the URL's the model fetches to backup their advice, backtracking where data can come from
+display the URL's colleted in turn 1's of multiple runs of the model
+Sub Headline: turn 1 (Bold, grey, middle aligned,BIG font)
+These URL's can be shown like
+'
+URL: needs to be clikable
+Working status:
+Defines the Generic Practice overall but doesn't address the user's dilemma specifically (show me 4 clean ways to say this diplomatically for not related, addresses user's dilemma, generic advice and defines practice)
+Anglophone Framworks found: boundaries, debt, savings.
+No need to show which location are they from
+
+display the other URL's
+Sub Headline: turn 2 (Bold, grey, middle aligned,BIG font)
+Display URL's
+and so on
+
+All of these were indian based because the orange button is pressed and when th other buttons are pressed , the other information will be displayed. hence these buttos needs to look good, be intutive, and obvious without shadow and bullshit 
+
+IMP: now these buttons have Indian one pressed so only the Indian information is seen for part 1 and part 2 and pat3.  if a user presses the  Nigerian one they press on part 1 or part 2or part 3 irrelevant of where its pressed... all 3 changes. so if the user presses part 2 Nigerian button. the part 1 Nigerian  and part 3 Nigerian one will be displayed in the world map and in jsonpart. So part 1 and Part 2  and part 3 buttons are connected that way
+
+
+What do I give you?
+I have three .json files.
+they have the first conversation stored
+each url's collected at each turn when run multiple times
+and url's location, culutural concepts and anglophone frameworks
+
+
+

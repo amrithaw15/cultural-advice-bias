@@ -1,0 +1,237 @@
+[
+  {
+    "url": "https://www.cnbc.com/video/2024/07/12/como-crear-lmites-financieros-con-sus-hijos.html?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "US",
+    "evidence": [
+      "Known US organization: www.cnbc.com",
+      "Checking /about-cnbc-international/...",
+      "Checking https://help.cnbc.com/contact/...",
+      "Checking https://www.versantprivacy.com...",
+      "Checking https://www.versantprivacy.com..."
+    ]
+  },
+  {
+    "url": "https://www.dropbox.com/es/resources/household-budget?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "US",
+    "evidence": [
+      "Checking /contact-sales...",
+      "about/contact page phone: US/Canada",
+      "Checking /contact-sales...",
+      "about/contact page phone: US/Canada",
+      "Checking /contact..."
+    ]
+  },
+  {
+    "url": "https://www.incharge.org/es/educacion-financiera/presupuesto-ahorro/consejos-de-presupuesto-familiares/?utm_source=openai",
+    "status": "error_403",
+    "status_code": 403,
+    "country": "Unknown",
+    "evidence": [
+      "HTTP status code: 403"
+    ]
+  },
+  {
+    "url": "https://www.univision.com/estilo-de-vida/bienestar/7-formas-de-organizarte-si-eres-un-trabajador-freelance?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "US",
+    "evidence": [
+      "Checking https://corporate.televisauniv...",
+      "about/contact page address: Attn: Privacy Department...",
+      "about/contact page address: 8551 NW 30 Terrace...",
+      "Checking /global/terms-of-use-en...",
+      "terms page phone: US/Canada"
+    ]
+  },
+  {
+    "url": "https://www.bunq.com/es-es/blog/how-to-balance-a-9-to-5-job-with-a-side-hustle?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "Unknown",
+    "evidence": [
+      "Checking ../about...",
+      "Checking ../about/sustainability...",
+      "Checking ../about/security..."
+    ]
+  },
+  {
+    "url": "https://www.infoautonomo.es/noticias/como-mantener-un-equilibrio-entre-la-vida-laboral-y-personal-como-freelance?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "Unknown",
+    "evidence": [
+      "Checking https://www.infoautonomo.es/co...",
+      "Checking https://www.infoautonomo.es/co..."
+    ]
+  },
+  {
+    "url": "https://www.nmdp.org/patients/transplant-support/patient-support-center/living-now/expressing-gratitude-to-your-caregiver?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "Unknown",
+    "evidence": [
+      "Checking /what-we-do/about-us...",
+      "Checking /what-we-do/about-us/websites...",
+      "Checking /what-we-do/about-us/careers..."
+    ]
+  },
+  {
+    "url": "https://www.premieriwm.com/insights/love-and-money-how-to-strengthen-your-relationship-through-financial-transparency?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "US",
+    "evidence": [
+      "Checking /contact...",
+      "about/contact page address: Dallas, TX - Branch Office...",
+      "about/contact page address: 214.550.9910Mailing Address: 5601 Execut...",
+      "about/contact page phone: US/Canada",
+      "Checking /contact...",
+      "about/contact page address: Dallas, TX - Branch Office...",
+      "about/contact page address: 214.550.9910Mailing Address: 5601 Execut...",
+      "about/contact page phone: US/Canada",
+      "Checking /about..."
+    ]
+  },
+  {
+    "url": "https://www.agingcare.com/articles/gratitude-can-change-your-life-151985.htm?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "US",
+    "evidence": [
+      "Checking /aboutus/policy...",
+      "about/contact page phone: US/Canada",
+      "Checking /aboutus/termsofuse...",
+      "terms page phone: US/Canada",
+      "Checking /aboutus/policy...",
+      "about/contact page phone: US/Canada"
+    ]
+  },
+  {
+    "url": "https://www.cnb.com/private-banking/insights/share-wealth-with-family.html?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "US",
+    "evidence": [
+      "Checking /about-us.html...",
+      "Checking /contact-us.html...",
+      "about/contact page phone: US/Canada",
+      "Checking /about-us.html..."
+    ]
+  },
+  {
+    "url": "https://americasaves.org/resource-center/insights/protecting-your-peace-with-financial-boundaries/?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "US",
+    "evidence": [
+      "Physical address found: Attn: America Saves...",
+      "Physical address found: 1620 Eye Street NW, Suite 200...",
+      "Physical address found: Washington, DC 20006...",
+      "Phone number found: US/Canada",
+      "Checking /learn-more-about-us/privacy-p...",
+      "about/contact page address: If you have any questions, text HELP to ...",
+      "about/contact page address: Attn: America Saves...",
+      "about/contact page phone: US/Canada",
+      "Checking /learn-more-about-us/privacy-p...",
+      "about/contact page address: If you have any questions, text HELP to ...",
+      "about/contact page address: Attn: America Saves...",
+      "about/contact page phone: US/Canada",
+      "Checking /terms-and-conditions/...",
+      "terms page address: We will not be liable for any delays in ...",
+      "terms page address: If you have any questions, text HELP to ...",
+      "terms page phone: US/Canada"
+    ]
+  },
+  {
+    "url": "https://www.experian.com/blogs/ask-experian/how-to-set-financial-boundaries/?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "US",
+    "evidence": [
+      "Checking /contact/personal-services-con...",
+      "about/contact page phone: US/Canada",
+      "Checking /protection/personal-privacy-s...",
+      "Checking /contact/personal-services-con...",
+      "about/contact page phone: US/Canada"
+    ]
+  },
+  {
+    "url": "https://linkedphone.com/the-freelancers-guide-to-freelancing-on-upwork-vs-fiverr/?utm_source=openai",
+    "status": "error_403",
+    "status_code": 403,
+    "country": "Unknown",
+    "evidence": [
+      "HTTP status code: 403"
+    ]
+  },
+  {
+    "url": "https://www.simplybusiness.com/resource/start-tutoring-business/?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "US",
+    "evidence": [
+      "Physical address found: 53 State Street, 19th Floor...",
+      "Physical address found: Boston, MA...",
+      "Physical address found: 02109...",
+      "Checking https://www.simplybusiness.com...",
+      "about/contact page address: 53 State Street, 19th Floor...",
+      "about/contact page address: Boston, MA...",
+      "about/contact page phone: US/Canada",
+      "Checking https://www.simplybusiness.com...",
+      "about/contact page address: 53 State Street, 19th Floor...",
+      "about/contact page address: Boston, MA...",
+      "about/contact page phone: US/Canada",
+      "Checking https://www.simplybusiness.com...",
+      "about/contact page address: 53 State Street, 19th Floor...",
+      "about/contact page address: Boston, MA..."
+    ]
+  },
+  {
+    "url": "https://www.fiverr.com/resources/guides/business/fiverr-vs-upwork?utm_source=openai",
+    "status": "error_403",
+    "status_code": 403,
+    "country": "Unknown",
+    "evidence": [
+      "HTTP status code: 403"
+    ]
+  },
+  {
+    "url": "https://www.fdic.gov/espanol/programa-money-smart?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "US",
+    "evidence": [
+      "Domain TLD: .gov",
+      "Checking /espanol/informacion-de-contac...",
+      "about/contact page phone: US/Canada",
+      "Checking /contact...",
+      "about/contact page phone: US/Canada",
+      "Checking /about/privacy-program...",
+      "about/contact page phone: US/Canada"
+    ]
+  },
+  {
+    "url": "https://www.habitat.org/financial-education/es?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "US",
+    "evidence": [
+      "Checking /about/advocacy...",
+      "about/contact page address: Government Relations and Advocacy...",
+      "about/contact page address: 1310 L Street NW, Suite 350...",
+      "Checking /about/partners/cause-marketin...",
+      "Checking /about..."
+    ]
+  },
+  {
+    "url": "https://centrolatinoeducacionfinanciera.org/?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "Unknown",
+    "evidence": []
+  }
+]

@@ -1,0 +1,118 @@
+[
+  {
+    "url": "https://www.apa.org/topics/families",
+    "status": "working",
+    "status_code": 200,
+    "country": "US",
+    "evidence": [
+      "Known US organization: www.apa.org"
+    ]
+  },
+  {
+    "url": "https://www.psychologytoday.com/us",
+    "status": "working",
+    "status_code": 200,
+    "country": "US",
+    "evidence": [
+      "Known US organization: www.psychologytoday.com",
+      "Footer mentions: US (United States)",
+      "Footer mentions: US (United States)",
+      "Footer mentions: US (United States)",
+      "Footer mentions: US (United States)",
+      "Found potential about/contact page: /us/docs/about-psychology-today",
+      "Found potential about/contact page: /us/docs/about-psychology-today"
+    ]
+  },
+  {
+    "url": "https://www.mayoclinic.org/",
+    "status": "working",
+    "status_code": 200,
+    "country": "US",
+    "evidence": [
+      "Known US organization: www.mayoclinic.org",
+      "Copyright mentions: UK (United Kingdom), UK (UK)",
+      "Found potential about/contact page: /about-mayo-clinic",
+      "Found potential about/contact page: /about-mayo-clinic/contact",
+      "Content analysis suggested: UK (but known organization is US)"
+    ]
+  },
+  {
+    "url": "https://www.bbc.com/news",
+    "status": "working",
+    "status_code": 200,
+    "country": "UK",
+    "evidence": [
+      "Known UK organization: www.bbc.com",
+      "Copyright mentions: US (USA), US (U.S.), US (America), UK (UK), UK (U.K.), UK (Britain), UK (England), UK (Scotland), UK (Wales), India (India), Canada (Canada), Australia (Australia)",
+      "Meta tag mentions: US (U.S.)",
+      "Meta tag mentions: US (U.S.)",
+      "Meta tag mentions: US (U.S.), UK (U.K.)",
+      "Meta tag mentions: US (U.S.), UK (U.K.)",
+      "Meta tag mentions: US (U.S.), UK (U.K.)",
+      "Found potential about/contact page: https://www.bbc.co.uk/aboutthebbc",
+      "Found potential about/contact page: https://www.bbc.co.uk/contact"
+    ]
+  },
+  {
+    "url": "https://www.theguardian.com/",
+    "status": "working",
+    "status_code": 200,
+    "country": "UK",
+    "evidence": [
+      "Known UK organization: www.theguardian.com",
+      "Footer mentions: UK (UK), India (India), India (Indian), Canada (Canada), Australia (Australia), Australia (Australian)",
+      "Found potential about/contact page: /about",
+      "Found potential about/contact page: /about",
+      "Content analysis suggested: India (but known organization is UK)"
+    ]
+  },
+  {
+    "url": "https://www.hindustantimes.com/",
+    "status": "working",
+    "status_code": 200,
+    "country": "India",
+    "evidence": [
+      "Known Indian organization: www.hindustantimes.com",
+      "Footer mentions: India (India)",
+      "Footer mentions: India (India)",
+      "Meta tag mentions: India (India)",
+      "Meta tag mentions: India (India)",
+      "Found potential about/contact page: https://www.hindustantimes.com/entertainment/bollywood/want-to-tell-stories-about-middle-class-india-says-ashwiny-iyer-tiwari-101764071537385.html",
+      "Found potential about/contact page: https://www.hindustantimes.com/entertainment/bollywood/want-to-tell-stories-about-middle-class-india-says-ashwiny-iyer-tiwari-101764071537385.html"
+    ]
+  },
+  {
+    "url": "https://www.nimhans.ac.in/",
+    "status": "connection_error",
+    "status_code": null,
+    "country": "India",
+    "evidence": [
+      "Domain TLD: .in",
+      "Could not connect to URL"
+    ]
+  },
+  {
+    "url": "https://www.nhs.uk/mental-health/",
+    "status": "working",
+    "status_code": 200,
+    "country": "UK",
+    "evidence": [
+      "Domain TLD: .uk",
+      "Copyright mentions: UK (UK)",
+      "Meta tag mentions: UK (UK)",
+      "Meta tag mentions: UK (UK)",
+      "Meta tag mentions: UK (UK)",
+      "Meta tag mentions: UK (UK)",
+      "Meta tag mentions: UK (UK)",
+      "Meta tag mentions: UK (UK)",
+      "Meta tag mentions: UK (UK)",
+      "Meta tag mentions: UK (UK)",
+      "Meta tag mentions: UK (UK)",
+      "Meta tag mentions: UK (UK)",
+      "Meta tag mentions: UK (UK)",
+      "Meta tag mentions: UK (UK)",
+      "Found potential about/contact page: /using-the-nhs/about-the-nhs/",
+      "Found potential about/contact page: /about-us/"
+    ]
+  }
+]

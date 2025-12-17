@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Therapy Advice: Geographic and Epistemological Bias Across Cultures</title>
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-cloud/1.2.5/d3.layout.cloud.min.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+        .subtitle {
+            text-align: center;
+            color: #7f8c8d;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+        .section {
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: #fafafa;
+            border-radius: 8px;
+        }
+        .section-title {
+            font-size: 20px;
+            color: #34495e;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 8px;
+        }
+        .plot-container {
+            width: 100%;
+            height: 500px;
+        }
+        .plot-container-large {
+            width: 100%;
+            height: 700px;
+        }
+        .plot-container-small {
+            width: 100%;
+            height: 400px;
+        }
+        #wordcloud {
+            width: 100%;
+            height: 500px;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>AI Therapy Advice: Geographic and Epistemological Bias Across Cultures</h1>
+        <p class="subtitle">Interactive analysis of ChatGPT's therapy recommendations across Filipino, Indian, and Nigerian contexts</p>
+
+        <!-- Section 1: World Map -->
+        <div class="section">
+            <div class="section-title">1. Geographic Distribution of Source URLs</div>
+            <div id="worldMap" class="plot-container-large"></div>
+        </div>
+
+        <!-- Section 2: Geographic Dominance -->
+        <div class="section">
+            <div class="section-title">2. Geographic Source Dominance</div>
+            <div id="geoDominance" class="plot-container-small"></div>
+        </div>
+
+        <!-- Section 3: Category Breakdown -->
+        <div class="section">
+            <div class="section-title">3. Cultural Context Categorization</div>
+            <div id="categoryBreakdown" class="plot-container"></div>
+        </div>
+
+        <!-- Section 4: Word Cloud -->
+        <div class="section">
+            <div class="section-title">4. Western Keywords Frequency (Word Cloud)</div>
+            <div id="wordcloud"></div>
+        </div>
+
+        <!-- Section 5: Heatmap -->
+        <div class="section">
+            <div class="section-title">5. Western Keyword Contamination Heatmap</div>
+            <div id="heatmap" class="plot-container"></div>
+        </div>
+
+        <!-- Section 6: Summary Table -->
+        <div class="section">
+            <div class="section-title">6. Cultural Concepts Summary</div>
+            <div id="summaryTable" class="plot-container"></div>
+        </div>
+    </div>
+
+    <script src="data_embedded.js"></script>
+    <script>
+        // Data is now loaded from data_embedded.js
+        function loadData() {
+            return Promise.resolve(embeddedData);
+        }
+
+        // User queries for each context
+        const userQueries = {
+            filipino: "Wedding planning with pamanhikan traditions and family expectations",
+            indian: "Joint family dynamics, salary contribution to grandfather, career decisions",
+            nigerian: "Owambe parties, first son responsibilities, elder care expectations"
+        };
+
+        // Country coordinates
+        const countryCoords = {
+            'US': { lat: 37.0902, lon: -95.7129 },
+            'UK': { lat: 55.3781, lon: -3.4360 },
+            'India': { lat: 20.5937, lon: 78.9629 },
+            'Philippines': { lat: 12.8797, lon: 121.7740 },
+            'Nigeria': { lat: 9.0820, lon: 8.6753 },
+            'Canada': { lat: 56.1304, lon: -106.3468 },
+            'Australia': { lat: -25.2744, lon: 133.7751 },
+            'New Zealand': { lat: -40.9006, lon: 174.8860 },
+            'Germany': { lat: 51.1657, lon: 10.4515 },
+            'Switzerland': { lat: 46.8182, lon: 8.2275 },
+            'Netherlands': { lat: 52.1326, lon: 5.2913 },
+            'France': { lat: 46.2276, lon: 2.2137 },
+            'Bangladesh': { lat: 23.6850, lon: 90.3563 },
+            'Pakistan': { lat: 30.3753, lon: 69.3451 },
+            'Indonesia': { lat: -0.7893, lon: 113.9213 },
+            'UAE': { lat: 23.4241, lon: 53.8478 },
+            'Hong Kong': { lat: 22.3193, lon: 114.1694 }
+        };
+
+        function getCountryColor(country, localCountry) {
+            if (country === 'US') return 'red';
+            if (country === localCountry) return 'green';
+            if (country === 'Unknown' || country === 'Expired') return 'gray';
+            return 'gold';
+        }
+
+        function countByCountry(data) {
+            const counts = {};
+            data.forEach(item => {
+                const country = item.country || 'Unknown';
+                counts[country] = (counts[country] || 0) + 1;
+            });
+            return counts;
+        }
+
+        function countByCategory(data) {
+            const counts = {
+                'addresses_user_dilemma': 0,
+                'defines_practice': 0,
+                'generic_advice': 0,
+                'not_related': 0,
+                'unknown': 0
+            };
+            data.forEach(item => {
+                const cat = item.cultural_context || 'unknown';
+                if (counts.hasOwnProperty(cat)) {
+                    counts[cat]++;
+                }
+            });
+            return counts;
+        }
+
+        // 1. World Map
+        function createWorldMap(data) {
+            const contexts = ['filipino', 'indian', 'nigerian'];
+            const localCountries = { filipino: 'Philippines', indian: 'India', nigerian: 'Nigeria' };
+            const colors = { filipino: '#3498db', indian: '#e74c3c', nigerian: '#f39c12' };
+
+            // Highlight the three main countries
+            const highlightTrace = {
+                type: 'scattergeo',
+                mode: 'markers+text',
+                lon: [121.7740, 78.9629, 8.6753],
+                lat: [12.8797, 20.5937, 9.0820],
+                text: ['Philippines', 'India', 'Nigeria'],
+                marker: {
+                    size: 20,
+                    color: ['#3498db', '#e74c3c', '#f39c12'],
+                    line: { width: 2, color: 'white' }
+                },
+                textfont: { size: 12, color: 'white' },
+                textposition: 'top center',
+                name: 'Study Contexts',
+                hovertemplate: '<b>%{text}</b><br>User Query: %{customdata}<extra></extra>',
+                customdata: [userQueries.filipino, userQueries.indian, userQueries.nigerian]
+            };
+
+            // Source URL locations
+            const traces = [highlightTrace];
+            contexts.forEach(context => {
+                const counts = countByCountry(data[context]);
+                const lats = [], lons = [], sizes = [], colors_list = [], texts = [];
+
+                Object.entries(counts).forEach(([country, count]) => {
+                    if (countryCoords[country]) {
+                        lats.push(countryCoords[country].lat);
+                        lons.push(countryCoords[country].lon);
+                        sizes.push(Math.sqrt(count) * 8);
+                        colors_list.push(getCountryColor(country, localCountries[context]));
+                        texts.push(`${country}: ${count} URLs`);
+                    }
+                });
+
+                traces.push({
+                    type: 'scattergeo',
+                    mode: 'markers',
+                    lon: lons,
+                    lat: lats,
+                    text: texts,
+                    marker: {
+                        size: sizes,
+                        color: colors_list,
+                        opacity: 0.7,
+                        line: { width: 1, color: 'white' }
+                    },
+                    name: context.charAt(0).toUpperCase() + context.slice(1),
+                    hovertemplate: '<b>%{text}</b><extra></extra>'
+                });
+            });
+
+            const layout = {
+                geo: {
+                    projection: { type: 'natural earth' },
+                    showland: true,
+                    landcolor: '#ecf0f1',
+                    showcountries: true,
+                    countrycolor: '#bdc3c7',
+                    showocean: true,
+                    oceancolor: '#d4e6f1'
+                },
+                title: {
+                    text: 'Red = US Sources | Green = Local Sources | Gold = Other International',
+                    font: { size: 12 }
+                },
+                showlegend: true,
+                height: 700,
+                margin: { l: 0, r: 0, t: 40, b: 0 }
+            };
+
+            Plotly.newPlot('worldMap', traces, layout, { responsive: true });
+        }
+
+        // 2. Geographic Dominance Stacked Bar
+        function createGeoDominance(data) {
+            const contexts = ['Filipino', 'Indian', 'Nigerian'];
+            const allCountries = ['US', 'Philippines', 'India', 'Nigeria', 'UK', 'Canada', 'Other'];
+            const colors = {
+                'US': '#e74c3c',
+                'Philippines': '#3498db',
+                'India': '#e67e22',
+                'Nigeria': '#f39c12',
+                'UK': '#9b59b6',
+                'Canada': '#1abc9c',
+                'Other': '#95a5a6'
+            };
+
+            const traces = [];
+            allCountries.forEach(country => {
+                const values = [];
+                ['filipino', 'indian', 'nigerian'].forEach(context => {
+                    const counts = countByCountry(data[context]);
+                    let count = 0;
+                    if (country === 'Other') {
+                        Object.entries(counts).forEach(([c, v]) => {
+                            if (!allCountries.slice(0, -1).includes(c) && c !== 'Unknown' && c !== 'Expired') {
+                                count += v;
+                            }
+                        });
+                    } else {
+                        count = counts[country] || 0;
+                    }
+                    const total = Object.values(counts).reduce((a, b) => a + b, 0);
+                    values.push(total > 0 ? (count / total * 100).toFixed(1) : 0);
+                });
+
+                traces.push({
+                    x: contexts,
+                    y: values,
+                    name: country,
+                    type: 'bar',
+                    marker: { color: colors[country] },
+                    hovertemplate: '<b>%{fullData.name}</b><br>%{y}%<extra></extra>'
+                });
+            });
+
+            const layout = {
+                barmode: 'stack',
+                title: 'Geographic Source Distribution by Context (%)',
+                xaxis: { title: 'Cultural Context' },
+                yaxis: { title: 'Percentage of Sources (%)' },
+                height: 400,
+                showlegend: true
+            };
+
+            Plotly.newPlot('geoDominance', traces, layout, { responsive: true });
+        }
+
+        // 3. Category Breakdown Horizontal Bar
+        function createCategoryBreakdown(data) {
+            const contexts = ['Filipino', 'Indian', 'Nigerian'];
+            const categories = {
+                'addresses_user_dilemma': 'Addresses User Dilemma',
+                'defines_practice': 'Defines Practice',
+                'generic_advice': 'Generic Advice',
+                'not_related': 'Not Related'
+            };
+            const colors = {
+                'addresses_user_dilemma': '#27ae60',
+                'defines_practice': '#3498db',
+                'generic_advice': '#f39c12',
+                'not_related': '#95a5a6'
+            };
+
+            const traces = [];
+            Object.entries(categories).forEach(([key, label]) => {
+                const values = [];
+                ['filipino', 'indian', 'nigerian'].forEach(context => {
+                    const counts = countByCategory(data[context]);
+                    values.push(counts[key] || 0);
+                });
+
+                traces.push({
+                    y: contexts,
+                    x: values,
+                    name: label,
+                    type: 'bar',
+                    orientation: 'h',
+                    marker: { color: colors[key] },
+                    hovertemplate: '<b>%{fullData.name}</b><br>Count: %{x}<extra></extra>'
+                });
+            });
+
+            const layout = {
+                barmode: 'stack',
+                title: 'Cultural Context Categorization by Source Count',
+                xaxis: { title: 'Number of URLs' },
+                yaxis: { title: 'Cultural Context' },
+                height: 500,
+                showlegend: true,
+                legend: { orientation: 'v', x: 1.02, y: 1 }
+            };
+
+            Plotly.newPlot('categoryBreakdown', traces, layout, { responsive: true });
+        }
+
+        // 4. Western Keywords Word Cloud
+        function createWordCloud(data) {
+            const wordCounts = { filipino: {}, indian: {}, nigerian: {} };
+
+            ['filipino', 'indian', 'nigerian'].forEach(context => {
+                data[context].forEach(item => {
+                    if (item.western_keywords) {
+                        item.western_keywords.forEach(word => {
+                            wordCounts[context][word] = (wordCounts[context][word] || 0) + 1;
+                        });
+                    }
+                });
+            });
+
+            // Combine all words
+            const allWords = {};
+            const wordContext = {};
+            Object.entries(wordCounts).forEach(([context, words]) => {
+                Object.entries(words).forEach(([word, count]) => {
+                    allWords[word] = (allWords[word] || 0) + count;
+                    if (!wordContext[word]) wordContext[word] = [];
+                    wordContext[word].push({ context, count });
+                });
+            });
+
+            // Prepare data for scatter plot word cloud
+            const words = Object.keys(allWords);
+            const sizes = words.map(w => allWords[w]);
+            const maxSize = Math.max(...sizes);
+
+            // Position words randomly but nicely
+            const traces = [];
+            const colors = { filipino: '#3498db', indian: '#e74c3c', nigerian: '#f39c12' };
+
+            words.forEach((word, i) => {
+                const angle = (i * 137.5) * Math.PI / 180; // Golden angle
+                const radius = Math.sqrt(i) * 2;
+                const x = radius * Math.cos(angle);
+                const y = radius * Math.sin(angle);
+
+                // Determine dominant context
+                const contexts = wordContext[word];
+                const dominant = contexts.reduce((a, b) => a.count > b.count ? a : b);
+
+                traces.push({
+                    x: [x],
+                    y: [y],
+                    mode: 'text',
+                    text: [word],
+                    textfont: {
+                        size: 12 + (allWords[word] / maxSize) * 30,
+                        color: colors[dominant.context]
+                    },
+                    hovertemplate: `<b>${word}</b><br>Total: ${allWords[word]}<br>` +
+                        contexts.map(c => `${c.context}: ${c.count}`).join('<br>') +
+                        '<extra></extra>',
+                    showlegend: false
+                });
+            });
+
+            const layout = {
+                title: 'Blue=Filipino | Red=Indian | Orange=Nigerian (Size = Frequency)',
+                xaxis: { visible: false, range: [-20, 20] },
+                yaxis: { visible: false, range: [-20, 20] },
+                height: 500,
+                hovermode: 'closest'
+            };
+
+            Plotly.newPlot('wordcloud', traces, layout, { responsive: true });
+        }
+
+        // 5. Heatmap
+        function createHeatmap(data) {
+            const contexts = ['Filipino', 'Indian', 'Nigerian'];
+            const westernKeywords = new Set();
+
+            // Collect all western keywords
+            ['filipino', 'indian', 'nigerian'].forEach(context => {
+                data[context].forEach(item => {
+                    if (item.western_keywords) {
+                        item.western_keywords.forEach(word => westernKeywords.add(word));
+                    }
+                });
+            });
+
+            const keywords = Array.from(westernKeywords).sort();
+            const matrix = keywords.map(keyword => {
+                return ['filipino', 'indian', 'nigerian'].map(context => {
+                    let count = 0;
+                    data[context].forEach(item => {
+                        if (item.western_keywords && item.western_keywords.includes(keyword)) {
+                            count++;
+                        }
+                    });
+                    return count;
+                });
+            });
+
+            const trace = {
+                z: matrix,
+                x: contexts,
+                y: keywords,
+                type: 'heatmap',
+                colorscale: 'YlOrRd',
+                hovertemplate: '<b>%{y}</b><br>%{x}: %{z} occurrences<extra></extra>'
+            };
+
+            const layout = {
+                title: 'Western Keyword Frequency Across Contexts',
+                xaxis: { title: 'Cultural Context' },
+                yaxis: { title: 'Western Keywords', automargin: true },
+                height: 500
+            };
+
+            Plotly.newPlot('heatmap', [trace], layout, { responsive: true });
+        }
+
+        // 6. Summary Table
+        function createSummaryTable(data) {
+            const contexts = ['Filipino', 'Indian', 'Nigerian'];
+            const contextKeys = ['filipino', 'indian', 'nigerian'];
+
+            const headers = ['Context', 'Top Cultural Concepts', 'Western Keywords Found', 'Total URLs'];
+            const cellValues = [[], [], [], []];
+
+            contextKeys.forEach((key, idx) => {
+                // Context name
+                cellValues[0].push(contexts[idx]);
+
+                // Top cultural concepts
+                const conceptCounts = {};
+                data[key].forEach(item => {
+                    if (item.matched_concepts) {
+                        Object.keys(item.matched_concepts).forEach(concept => {
+                            conceptCounts[concept] = (conceptCounts[concept] || 0) + 1;
+                        });
+                    }
+                });
+                const topConcepts = Object.entries(conceptCounts)
+                    .sort((a, b) => b[1] - a[1])
+                    .slice(0, 3)
+                    .map(([concept, count]) => `${concept} (${count})`)
+                    .join(', ');
+                cellValues[1].push(topConcepts || 'None');
+
+                // Western keywords
+                const westernCounts = {};
+                data[key].forEach(item => {
+                    if (item.western_keywords) {
+                        item.western_keywords.forEach(word => {
+                            westernCounts[word] = (westernCounts[word] || 0) + 1;
+                        });
+                    }
+                });
+                const topWestern = Object.entries(westernCounts)
+                    .sort((a, b) => b[1] - a[1])
+                    .slice(0, 3)
+                    .map(([word, count]) => `${word} (${count})`)
+                    .join(', ');
+                cellValues[2].push(topWestern || 'None');
+
+                // Total URLs
+                cellValues[3].push(data[key].length);
+            });
+
+            const trace = {
+                type: 'table',
+                header: {
+                    values: headers,
+                    align: 'center',
+                    line: { width: 1, color: '#bdc3c7' },
+                    fill: { color: '#3498db' },
+                    font: { family: 'Arial', size: 14, color: 'white' }
+                },
+                cells: {
+                    values: cellValues,
+                    align: 'left',
+                    line: { color: '#ecf0f1', width: 1 },
+                    fill: { color: ['#ecf0f1', 'white'] },
+                    font: { family: 'Arial', size: 12, color: '#2c3e50' },
+                    height: 30
+                }
+            };
+
+            const layout = {
+                title: 'Summary: Top Concepts and Western Keyword Contamination',
+                height: 500
+            };
+
+            Plotly.newPlot('summaryTable', [trace], layout, { responsive: true });
+        }
+
+        // Main execution
+        loadData().then(data => {
+            createWorldMap(data);
+            createGeoDominance(data);
+            createCategoryBreakdown(data);
+            createWordCloud(data);
+            createHeatmap(data);
+            createSummaryTable(data);
+        }).catch(error => {
+            console.error('Error loading data:', error);
+            alert('Error loading data files. Make sure all JSON files are in the same directory as this HTML file.');
+        });
+    </script>
+</body>
+</html>

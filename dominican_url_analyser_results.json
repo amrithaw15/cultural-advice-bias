@@ -1,0 +1,343 @@
+[
+  {
+    "url": "https://www.udel.edu/academics/colleges/canr/cooperative-extension/fact-sheets/communicating-about-money/?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "US",
+    "evidence": [
+      "Domain ends with .edu: www.udel.edu",
+      "Physical address found: Contact Us...",
+      "Physical address found: University of Delaware Newark, DE 19716 USA...",
+      "Physical address found: P: 302-831-2792...",
+      "Phone number found: US/Canada/DR",
+      "Checking /academics/colleges/canr/about...",
+      "about/contact page address: Contact Us...",
+      "about/contact page address: University of Delaware Newark, DE 19716 ...",
+      "about/contact page phone: US/Canada/DR",
+      "Checking /academics/colleges/canr/about...",
+      "about/contact page address: Contact Us...",
+      "about/contact page address: University of Delaware Newark, DE 19716 ...",
+      "about/contact page phone: US/Canada/DR",
+      "Checking /academics/colleges/canr/coope...",
+      "about/contact page address: Contact Us...",
+      "about/contact page address: University of Delaware Newark, DE 19716 ...",
+      "about/contact page phone: US/Canada/DR"
+    ],
+    "cultural_context": "general_advice",
+    "cultural_keywords": []
+  },
+  {
+    "url": "https://www.cnb.com/private-banking/insights/share-wealth-with-family.html?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "US",
+    "evidence": [
+      "Checking /contact-us.html...",
+      "about/contact page phone: US/Canada/DR",
+      "Checking /contact-us.html...",
+      "about/contact page phone: US/Canada/DR",
+      "Checking /contact-us/bank-holiday-calen..."
+    ],
+    "cultural_context": "general_advice",
+    "cultural_keywords": []
+  },
+  {
+    "url": "https://americasaves.org/resource-center/insights/protecting-your-peace-with-financial-boundaries/?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "US",
+    "evidence": [
+      "Physical address found: Attn: America Saves...",
+      "Physical address found: 1620 Eye Street NW, Suite 200...",
+      "Physical address found: Washington, DC 20006...",
+      "Phone number found: US/Canada/DR",
+      "Checking /learn-more-about-us/privacy-p...",
+      "about/contact page address: If you have any questions, text HELP to ...",
+      "about/contact page address: Attn: America Saves...",
+      "about/contact page phone: US/Canada/DR",
+      "Checking /learn-more-about-us/privacy-p...",
+      "about/contact page address: If you have any questions, text HELP to ...",
+      "about/contact page address: Attn: America Saves...",
+      "about/contact page phone: US/Canada/DR",
+      "Checking /about-us/...",
+      "about/contact page address: Attn: America Saves...",
+      "about/contact page address: 1620 Eye Street NW, Suite 200...",
+      "about/contact page phone: US/Canada/DR"
+    ],
+    "cultural_context": "general_advice",
+    "cultural_keywords": []
+  },
+  {
+    "url": "https://www.elfinanciero.com.mx/mis-finanzas/2024/12/14/quieres-lana-extra-4-plataformas-de-freelance-que-ofrecen-chamba-y-hasta-pagan-en-dolares//?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "Mexico",
+    "evidence": [
+      "Known Mexican organization: www.elfinanciero.com.mx"
+    ],
+    "cultural_context": "general_advice",
+    "cultural_keywords": []
+  },
+  {
+    "url": "https://www.eltiempo.com/cultura/gente/siete-tips-para-protegerse-del-burnout-en-el-trabajo-3382243?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "Colombia",
+    "evidence": [
+      "Known Colombian organization: www.eltiempo.com",
+      "Checking https://www.eltiempo.com/conte..."
+    ],
+    "cultural_context": "general_advice",
+    "cultural_keywords": []
+  },
+  {
+    "url": "https://icardin.com/trabajos-extras-desde-casa/?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "Unknown",
+    "evidence": [
+      "Checking https://icardin.com/contacto/...",
+      "Checking https://icardin.com/contacto/...",
+      "Checking https://icardin.com/contacto/..."
+    ],
+    "cultural_context": "general_advice",
+    "cultural_keywords": []
+  },
+  {
+    "url": "https://www.bbva.com/es/salud-financiera/podcast-pasos-a-seguir-de-como-hacer-un-presupuesto-familiar/?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "Spain",
+    "evidence": [
+      "Checking https://www.bbva.com/es/contac...",
+      "about/contact page address: Sede social...",
+      "about/contact page address: Plaza San Nicolás, 4 - 48005 Bilbao...",
+      "about/contact page phone: US/Canada/DR",
+      "Checking https://www.bbva.com/es/contac...",
+      "Checking https://www.bbva.com/es/contac..."
+    ],
+    "cultural_context": "general_advice",
+    "cultural_keywords": []
+  },
+  {
+    "url": "https://workmoney.org/es/money-tips/budget-101/10-budgeting-tips-for-families?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "US",
+    "evidence": [
+      "Checking /es/about-us/contact-us...",
+      "about/contact page phone: US/Canada/DR",
+      "Checking /es/about-us/member-benefits...",
+      "Checking /es/about-us..."
+    ],
+    "cultural_context": "general_advice",
+    "cultural_keywords": []
+  },
+  {
+    "url": "https://www.aarp.org/espanol/recursos-para-el-cuidado/asuntos-legales-financieros/info-2020/administrar-finanzas-dinero-ser-querido.html?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "US",
+    "evidence": [
+      "Known US organization: www.aarp.org",
+      "Phone number found: US/Canada/DR",
+      "Checking https://ayuda.aarp.org/s/artic...",
+      "Checking https://www.sec.gov/oiea/inves...",
+      "about/contact page phone: US/Canada/DR",
+      "Checking https://ayuda.aarp.org/s/artic..."
+    ],
+    "cultural_context": "general_advice",
+    "cultural_keywords": []
+  },
+  {
+    "url": "https://www.dropbox.com/es/resources/work-life-balance?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "US",
+    "evidence": [
+      "Checking /contact-sales...",
+      "about/contact page phone: US/Canada/DR",
+      "Checking /contact-sales...",
+      "about/contact page phone: US/Canada/DR",
+      "Checking /contact..."
+    ],
+    "cultural_context": "general_advice",
+    "cultural_keywords": []
+  },
+  {
+    "url": "https://mhanational.org/es/resources/equilibrio-entre-la-vida-laboral-y-personal/?utm_source=openai",
+    "status": "error_403",
+    "status_code": 403,
+    "country": "US",
+    "evidence": [
+      "Known US organization: mhanational.org",
+      "HTTP status code: 403"
+    ],
+    "cultural_context": "unknown",
+    "cultural_keywords": []
+  },
+  {
+    "url": "https://lamenteesmaravillosa.com/work-life-balance/?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "Unknown",
+    "evidence": [],
+    "cultural_context": "general_advice",
+    "cultural_keywords": []
+  },
+  {
+    "url": "https://www.marthadebayle.com/especialistas/mario-guerra/la-importancia-del-perdon-y-la-gratitud-en-tu-relacion/?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "Mexico",
+    "evidence": [
+      "Physical address found: Política de Privacidad...",
+      "Physical address found: Alejandro Dumas 241 / Col. Polanco-Reforma / CP. 1...",
+      "Physical address found: © Todos los Derechos Reservados de Media Marketing..."
+    ],
+    "cultural_context": "general_advice",
+    "cultural_keywords": []
+  },
+  {
+    "url": "https://www.carlacadremy.com/post/la-gratitud-como-clave-para-fortalecer-las-relaciones-familiares?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "Unknown",
+    "evidence": [],
+    "cultural_context": "general_advice",
+    "cultural_keywords": []
+  },
+  {
+    "url": "https://www.infosalus.com/salud-investigacion/noticia-beneficios-decir-gracias-relaciones-pareja-son-similares-relaciones-familiares-20240814081548.html?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "Spain",
+    "evidence": [
+      "Checking https://www.infosalus.com/avis...",
+      "about/contact page address: DOMICILIO SOCIAL: PASEO DE LA CASTELLANA..."
+    ],
+    "cultural_context": "general_advice",
+    "cultural_keywords": []
+  },
+  {
+    "url": "https://www.consumerfinance.gov/es/el-dinero-mientras-creces/como-hablar-sobre-las-decisiones-relacionadas-con-el-dinero/?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "US",
+    "evidence": [
+      "Domain TLD: .gov",
+      "Checking /consumer-tools/money-as-you-g...",
+      "about/contact page phone: US/Canada/DR",
+      "Checking /about-us/omwi/...",
+      "about/contact page phone: US/Canada/DR",
+      "Checking /privacy/...",
+      "about/contact page phone: US/Canada/DR"
+    ],
+    "cultural_context": "general_advice",
+    "cultural_keywords": []
+  },
+  {
+    "url": "https://workmoney.org/es/money-tips/budget-101/10-budgeting-tips-for-families?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "US",
+    "evidence": [
+      "Checking /es/about-us/contact-us...",
+      "about/contact page phone: US/Canada/DR",
+      "Checking /es/about-us/member-benefits...",
+      "Checking /es/about-us..."
+    ],
+    "cultural_context": "general_advice",
+    "cultural_keywords": []
+  },
+  {
+    "url": "https://www.principal.com/es/personas/vida-y-dinero/matrimonio-y-dinero-seis-conversaciones-que-pueden-ser-de-utilidad?utm_source=openai",
+    "status": "error_403",
+    "status_code": 403,
+    "country": "Unknown",
+    "evidence": [
+      "HTTP status code: 403"
+    ],
+    "cultural_context": "unknown",
+    "cultural_keywords": []
+  },
+  {
+    "url": "https://newsnetwork.mayoclinic.org/es/2017/10/27/consejos-de-salud-de-mayo-clinic-equilibrio-entre-el-trabajo-y-la-vida-personal/?utm_source=openai",
+    "status": "error_403",
+    "status_code": 403,
+    "country": "Unknown",
+    "evidence": [
+      "HTTP status code: 403"
+    ],
+    "cultural_context": "unknown",
+    "cultural_keywords": []
+  },
+  {
+    "url": "https://www.idealist.org/es/accion/como-encontrar-equilibrio-trabajo-vida-personal?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "Unknown",
+    "evidence": [
+      "Checking /es/about/contactanos...",
+      "Checking /es/about...",
+      "Checking /en/terms-of-service..."
+    ],
+    "cultural_context": "general_advice",
+    "cultural_keywords": []
+  },
+  {
+    "url": "https://zentrumcoaching.com/work-life-balance-6-estrategias-para-mantener-el-equilibrio-entre-el-trabajo-y-la-vida-personal/?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "Spain",
+    "evidence": [
+      "Checking /contactanos/...",
+      "Checking https://zentrumcoaching.com/co...",
+      "Checking /contactanos/...",
+      "about/contact page address: Dirección: Rambla Catalunya nº 65 entres...",
+      "Checking /contactanos/...",
+      "about/contact page address: Dirección: Rambla Catalunya nº 65 entres...",
+      "Checking /aviso-legal..."
+    ],
+    "cultural_context": "general_advice",
+    "cultural_keywords": []
+  },
+  {
+    "url": "https://fdic.gov/consumer-resource-center/2025-05/educacion-financiera-para-cada-etapa-de-la-vida?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "US",
+    "evidence": [
+      "Domain TLD: .gov",
+      "Checking /contact...",
+      "about/contact page phone: US/Canada/DR",
+      "Checking /about/contact-fdic...",
+      "about/contact page phone: US/Canada/DR",
+      "Checking /about..."
+    ],
+    "cultural_context": "general_advice",
+    "cultural_keywords": []
+  },
+  {
+    "url": "https://elpais.com/america-futura/2024-09-20/la-educacion-financiera-es-una-de-las-herramientas-mas-eficaces-para-acortar-la-desigualdad.html?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "Spain",
+    "evidence": [
+      "Known Spanish organization: elpais.com"
+    ],
+    "cultural_context": "general_advice",
+    "cultural_keywords": []
+  },
+  {
+    "url": "https://snnla.org/es/flw/?utm_source=openai",
+    "status": "error_403",
+    "status_code": 403,
+    "country": "Unknown",
+    "evidence": [
+      "HTTP status code: 403"
+    ],
+    "cultural_context": "unknown",
+    "cultural_keywords": []
+  }
+]

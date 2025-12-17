@@ -1,0 +1,309 @@
+[
+  {
+    "url": "https://zolanaweddings.com/2024/12/11/expert-tips-for-managing-family-dynamics/?utm_source=openai",
+    "status": "error_403",
+    "status_code": 403,
+    "country": "Unknown",
+    "evidence": [
+      "HTTP status code: 403"
+    ],
+    "cultural_context": "unknown",
+    "matched_keywords": [],
+    "matched_concepts": {},
+    "unique_concept_count": 0,
+    "western_keywords": []
+  },
+  {
+    "url": "https://themarigoldcompany.com/navigating-family-dynamics-during-wedding-planning/?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "Unknown",
+    "evidence": [
+      "Checking https://themarigoldcompany.com...",
+      "Checking https://themarigoldcompany.com...",
+      "Checking https://themarigoldcompany.com..."
+    ],
+    "cultural_context": "not_related",
+    "matched_keywords": [],
+    "matched_concepts": {},
+    "unique_concept_count": 0,
+    "western_keywords": []
+  },
+  {
+    "url": "https://www.augmentedartsweddings.com.au/blog/how-to-deal-with-family-dynamics-expectations-and-traditions-on-your-wedding-day/?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "Australia",
+    "evidence": [
+      "Domain TLD: .au",
+      "Checking /contact/...",
+      "Checking /contact/...",
+      "Checking /contact/..."
+    ],
+    "cultural_context": "generic_advice",
+    "matched_keywords": [
+      "family expectations"
+    ],
+    "matched_concepts": {
+      "family_contributions": [
+        "family expectations"
+      ]
+    },
+    "unique_concept_count": 1,
+    "western_keywords": [
+      "boundaries",
+      "delegate"
+    ]
+  },
+  {
+    "url": "https://travelwithkarla.com/2025/10/10/the-ultimate-modern-pamamanhikan-guide-how-to-plan-a-meaningful-family-gathering/?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "Philippines",
+    "evidence": [
+      "Checking https://travelwithkarla.com/ab...",
+      "about/contact page address: Crown Asia Debuts Latest Themed Developm...",
+      "about/contact page address: Tanglaw sa Paskong Imuseño 2025: Imus Ci...",
+      "Checking https://travelwithkarla.com/20...",
+      "about/contact page address: Crown Asia Debuts Latest Themed Developm...",
+      "about/contact page address: Tanglaw sa Paskong Imuseño 2025: Imus Ci..."
+    ],
+    "cultural_context": "addresses_user_dilemma",
+    "matched_keywords": [
+      "pamamanhikan",
+      "manila",
+      "filipino tradition"
+    ],
+    "matched_concepts": {
+      "pamanhikan": [
+        "pamamanhikan"
+      ],
+      "manila": [
+        "manila"
+      ],
+      "filipino_tradition": [
+        "filipino tradition"
+      ]
+    },
+    "unique_concept_count": 3,
+    "western_keywords": [
+      "Open Communication"
+    ]
+  },
+  {
+    "url": "https://www.newsbytesapp.com/news/lifestyle/unique-filipino-wedding-traditions-strengthen-family-ties/story?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "Singapore",
+    "evidence": [
+      "Known Singaporean organization: www.newsbytesapp.com",
+      "Checking /contact...",
+      "about/contact page phone: Singapore",
+      "Checking https://www.newsbytesapp.com/n...",
+      "Checking https://www.newsbytesapp.com/n..."
+    ],
+    "cultural_context": "defines_practice",
+    "matched_keywords": [
+      "pamanhikan",
+      "filipino tradition"
+    ],
+    "matched_concepts": {
+      "pamanhikan": [
+        "pamanhikan"
+      ],
+      "filipino_tradition": [
+        "filipino tradition"
+      ]
+    },
+    "unique_concept_count": 2,
+    "western_keywords": []
+  },
+  {
+    "url": "https://www.sfcsbc.com/pamamanhikan-the-heart-of-parental-respect-in-the-philippine-marriage/?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "Canada",
+    "evidence": [
+      "Known Canadian organization: www.sfcsbc.com",
+      "Phone number found: US/Canada",
+      "Checking https://www.sfcsbc.com/contact...",
+      "about/contact page phone: US/Canada",
+      "Checking https://www.sfcsbc.com/contact...",
+      "about/contact page phone: US/Canada",
+      "Checking https://www.sfcsbc.com/contact...",
+      "about/contact page phone: US/Canada",
+      "Content analysis suggested: US (but known organization is Canada)"
+    ],
+    "cultural_context": "addresses_user_dilemma",
+    "matched_keywords": [
+      "pamamanhikan",
+      "pakikisama",
+      "kapwa"
+    ],
+    "matched_concepts": {
+      "pamanhikan": [
+        "pamamanhikan"
+      ],
+      "pakikisama": [
+        "pakikisama"
+      ],
+      "kapwa": [
+        "kapwa"
+      ]
+    },
+    "unique_concept_count": 3,
+    "western_keywords": []
+  },
+  {
+    "url": "https://www.marriagehint.com/living-with-in-laws/?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "India",
+    "evidence": [
+      "Known Indian organization: www.marriagehint.com",
+      "Checking https://www.marriagehint.com/c...",
+      "Checking https://www.marriagehint.com/c...",
+      "Checking https://www.marriagehint.com/c..."
+    ],
+    "cultural_context": "generic_advice",
+    "matched_keywords": [
+      "living with in-laws",
+      "extended family living"
+    ],
+    "matched_concepts": {
+      "living_with_family": [
+        "living with in-laws",
+        "extended family living"
+      ]
+    },
+    "unique_concept_count": 1,
+    "western_keywords": [
+      "boundaries",
+      "personal space",
+      "Open Communication",
+      "Couple Time",
+      "Assert",
+      "Interference"
+    ]
+  },
+  {
+    "url": "https://www.indiatoday.in/lifestyle/society/story/should-newlyweds-live-on-their-own-for-a-few-years-instead-of-with-in-laws-2590116-2024-08-30/?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "India",
+    "evidence": [
+      "Known Indian organization: www.indiatoday.in",
+      "Checking https://www.indiatodaygroup.co...",
+      "about/contact page address: Manoj Sharma...",
+      "about/contact page address: CEO, Magazines THE INDIA TODAY GROUP...",
+      "about/contact page phone: India",
+      "Checking https://www.indiatodaygroup.co...",
+      "Checking https://www.indiatodaygroup.co...",
+      "about/contact page address: Registered office address-...",
+      "about/contact page address: F-26, 1stFloor, Connaught Circus,..."
+    ],
+    "cultural_context": "generic_advice",
+    "matched_keywords": [
+      "raising children"
+    ],
+    "matched_concepts": {
+      "preparing_for_baby": [
+        "raising children"
+      ]
+    },
+    "unique_concept_count": 1,
+    "western_keywords": [
+      "personal space",
+      "Interference"
+    ]
+  },
+  {
+    "url": "https://www.bonobology.com/pros-cons-living-laws/?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "US",
+    "evidence": [
+      "Known US organization: www.bonobology.com",
+      "Physical address found: Contact Us...",
+      "Physical address found: ADDRESS 209 N Coler Ave,...",
+      "Physical address found: Apt 5, Urbana, IL 61801...",
+      "Checking https://www.bonobology.com/con...",
+      "about/contact page address: Contact Us...",
+      "about/contact page address: ADDRESS 209 N Coler Ave,...",
+      "about/contact page phone: India",
+      "Checking https://www.bonobology.com/con...",
+      "about/contact page address: Contact Us...",
+      "about/contact page address: ADDRESS 209 N Coler Ave,...",
+      "about/contact page phone: India",
+      "Checking https://www.bonobology.com/how...",
+      "about/contact page address: Contact Us...",
+      "about/contact page address: ADDRESS 209 N Coler Ave,..."
+    ],
+    "cultural_context": "generic_advice",
+    "matched_keywords": [
+      "living with in-laws",
+      "relationship with in-laws",
+      "parenting help",
+      "grandparents",
+      "having a baby"
+    ],
+    "matched_concepts": {
+      "living_with_family": [
+        "living with in-laws",
+        "relationship with in-laws",
+        "parenting help",
+        "grandparents"
+      ],
+      "preparing_for_baby": [
+        "having a baby"
+      ]
+    },
+    "unique_concept_count": 2,
+    "western_keywords": [
+      "boundaries",
+      "Interference"
+    ]
+  },
+  {
+    "url": "https://www.letsmakeaplan.org/financial-topics/articles/family-finances/three-essential-financial-considerations-for-new-parents?utm_source=openai",
+    "status": "error_403",
+    "status_code": 403,
+    "country": "Unknown",
+    "evidence": [
+      "HTTP status code: 403"
+    ],
+    "cultural_context": "unknown",
+    "matched_keywords": [],
+    "matched_concepts": {},
+    "unique_concept_count": 0,
+    "western_keywords": []
+  },
+  {
+    "url": "https://www.letsmakeaplan.org/financial-topics/articles/family-finances/financial-and-budget-considerations-for-starting-a-family?utm_source=openai",
+    "status": "error_403",
+    "status_code": 403,
+    "country": "Unknown",
+    "evidence": [
+      "HTTP status code: 403"
+    ],
+    "cultural_context": "unknown",
+    "matched_keywords": [],
+    "matched_concepts": {},
+    "unique_concept_count": 0,
+    "western_keywords": []
+  },
+  {
+    "url": "https://goodmenproject.com/featured-content/7-financial-considerations-for-having-children/?utm_source=openai",
+    "status": "error_403",
+    "status_code": 403,
+    "country": "Unknown",
+    "evidence": [
+      "HTTP status code: 403"
+    ],
+    "cultural_context": "unknown",
+    "matched_keywords": [],
+    "matched_concepts": {},
+    "unique_concept_count": 0,
+    "western_keywords": []
+  }
+]

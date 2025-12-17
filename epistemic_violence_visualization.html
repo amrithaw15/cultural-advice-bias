@@ -1,0 +1,1193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Epistemic Violence in AI Advice</title>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #121212;
+            color: #808080;
+            font-family: 'Courier Prime', Monaco, monospace;
+            font-size: 16px;
+            padding: 50px;
+            min-width: 1200px;
+        }
+
+        .section {
+            margin-bottom: 200px;
+        }
+
+        .header-xl {
+            font-size: 60px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #FFFFFF;
+        }
+
+        .subtext {
+            font-size: 16px;
+            text-align: center;
+            max-width: 1000px;
+            margin: 0 auto 30px;
+            line-height: 1.4;
+            color: #808080;
+        }
+
+        .user-briefs {
+            text-align: center;
+            margin-bottom: 80px;
+            font-size: 15px;
+            line-height: 1.3;
+        }
+
+        .user-brief {
+            margin-bottom: 3px;
+            color: #808080;
+        }
+
+        .india { color: #FF6B35; }
+        .nigeria { color: #6cff39; }
+        .philippines { color: #ff5bf5; }
+
+        .button-group {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 50px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .button-group.wide {
+            justify-content: space-around;
+            max-width: 100%;
+        }
+
+        .context-button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            padding: 0;
+            position: relative;
+        }
+
+        .button-label {
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 18px;
+            font-weight: bold;
+            opacity: 0;
+            transition: opacity 0.3s;
+            white-space: nowrap;
+        }
+
+        .context-button.active .button-label {
+            opacity: 1;
+        }
+
+        .context-button img {
+            transition: all 0.3s ease;
+        }
+
+        .default-icon {
+            display: block;
+            width: 100px;
+            height: 100px;
+        }
+
+        .hover-icon {
+            display: none;
+            width: 120px;
+            height: 120px;
+        }
+
+        .active-icon {
+            display: none;
+            width: 120px;
+            height: 120px;
+        }
+
+        .context-button:hover:not(.active) .default-icon {
+            display: none;
+        }
+
+        .context-button:hover:not(.active) .hover-icon {
+            display: block;
+            width: 120px;
+            height: 120px;
+        }
+
+        .context-button.active .default-icon {
+            display: none;
+        }
+
+        .context-button.active .hover-icon {
+            display: none;
+        }
+
+        .context-button.active .active-icon {
+            display: block;
+        }
+
+        #map-container {
+            width: 100vw;
+            height: 800px;
+            position: relative;
+            margin-top: -120px;
+            margin-left: -50px;
+            margin-right: -50px;
+        }
+
+        .tooltip {
+            position: absolute;
+            background: rgba(0, 0, 0, 0.95);
+            padding: 8px 15px;
+            font-size: 18px;
+            font-weight: bold;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.3s;
+            z-index: 200;
+            border-radius: 4px;
+        }
+
+        /* PART 2 STYLES */
+        #analysis-content {
+            width: 100%;
+        }
+
+        .sticky-buttons-part2 {
+            position: sticky;
+            top: 0;
+            background-color: #121212;
+            padding: 30px 0 10px 0;
+            z-index: 999;
+            margin-bottom: 40px;
+        }
+
+        .sticky-buttons-part2.unstick {
+            position: relative;
+        }
+
+        .column-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 60px;
+            width: 100%;
+            align-items: start;
+            margin-bottom: 80px;
+        }
+
+        .column-container {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            visibility: hidden;
+        }
+
+        .column-container.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .write-up {
+            font-size: 16px;
+            text-align: center;
+            max-width: 100%;
+            margin: 0 auto 60px;
+            color: #808080;
+            line-height: 1.3;
+            width: 100%;
+        }
+
+        .category-section {
+            margin-bottom: 60px;
+        }
+
+        .data-item {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 3px;
+            line-height: 1.2;
+        }
+
+        .data-item.animated {
+            opacity: 0;
+            animation: fadeIn 0.3s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        .bar-chart-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            gap: 10px;
+            height: 220px;
+            margin: -80px auto 20px auto;
+            width: fit-content;
+        }
+
+        .bar {
+            width: 35px;
+            transition: height 0.8s ease-out;
+        }
+
+        .unknown-text {
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .concept-tree {
+            margin-bottom: 30px;
+        }
+
+        .concept-header {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .concept-child {
+            font-size: 16px;
+            margin-left: 30px;
+            margin-bottom: 6px;
+            line-height: 1.2;
+        }
+
+        /* PART 3 STYLES */
+        .sticky-header-part3 {
+            position: sticky;
+            top: 0;
+            background-color: #121212;
+            padding: 30px 50px 10px 50px;
+            z-index: 1000;
+            margin-bottom: 0;
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+        }
+
+        .sticky-header-part3 .button-group {
+            margin-bottom: 0;
+            grid-column: 2;
+            justify-self: center;
+        }
+
+        .back-to-top-sticky {
+            font-size: 16px;
+            color: #808080;
+            text-decoration: none;
+            border: 2px solid #808080;
+            padding: 12px 30px;
+            transition: all 0.3s;
+            white-space: nowrap;
+            grid-column: 3;
+            justify-self: end;
+        }
+
+        .back-to-top-sticky:hover {
+            background-color: #808080;
+            color: #121212;
+        }
+
+        .turn-section {
+            margin-bottom: 60px;
+        }
+
+        .turn-header {
+            font-size: 36px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 30px;
+            color: #FFFFFF;
+        }
+
+        .dialogue {
+            font-size: 15px;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+
+        .dialogue-label {
+            font-weight: bold;
+        }
+
+        .url-section-header {
+            font-size: 32px;
+            font-weight: bold;
+            text-align: center;
+            margin: 80px 0 20px 0;
+            color: #FFFFFF;
+        }
+
+        .url-section-subheader {
+            font-size: 18px;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #808080;
+        }
+
+        .url-turn-header {
+            font-size: 28px;
+            font-weight: bold;
+            text-align: center;
+            margin: 50px 0 30px 0;
+            color: #808080;
+        }
+
+        .url-entry {
+            margin-bottom: 40px;
+            padding: 20px 0;
+            border-bottom: 1px solid #2a2a2a;
+        }
+
+        .url-entry:last-child {
+            border-bottom: none;
+        }
+
+        .url-link {
+            font-size: 16px;
+            word-break: break-all;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .url-link:hover {
+            text-decoration: underline;
+        }
+
+        .url-meta {
+            font-size: 15px;
+            line-height: 1.8;
+        }
+
+        .url-meta-label {
+            font-weight: bold;
+            color: #808080;
+        }
+
+        .back-to-top {
+            font-size: 20px;
+            color: #808080;
+            text-decoration: none;
+            border: 2px solid #808080;
+            padding: 15px 40px;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+
+        .back-to-top:hover {
+            background-color: #808080;
+            color: #121212;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- PART 1: World Map + Geographic Distribution -->
+    <div class="section" id="part1">
+        <div class="header-xl">Epistemic Erasure in AI Advice</div>
+        
+        <div class="subtext">
+            When AI systems provide advice, they draw from predominantly Anglophone (Western) sources, even when users present culturally specific dilemmas. This visualization reveals the geographic and epistemological biases embedded in AI responses that shape our everyday lives.In this experiment, three users engage with AI across multiple conversation turns:
+        </div>
+
+        <div class="user-briefs">
+            <div class="user-brief">
+                <span class="india">User A</span> asks AI for advice about their <span class="india">joint family</span> situation in <span class="india">West Bengal, India</span>
+            </div>
+            <div class="user-brief">
+                <span class="nigeria">User B</span> asks AI for advice about <span class="nigeria">owambe parties</span> and <span class="nigeria">first son obligations</span> in <span class="nigeria">Lagos, Nigeria</span>
+            </div>
+            <div class="user-brief">
+                <span class="philippines">User C</span> asks AI for advice about <span class="philippines">pamanhikan</span> pre-wedding arrangements in <span class="philippines">Quezon City, Philippines</span>
+            </div>
+        </div>
+
+        <div class="button-group" id="map-buttons">
+            <button class="context-button active" data-context="india">
+                <span class="button-label india">User A</span>
+                <img src="greyspace.png" alt="India default" class="default-icon">
+                <img src="orangespace.png" alt="India hover" class="hover-icon">
+                <img src="orangespace.png" alt="India active" class="active-icon">
+            </button>
+            <button class="context-button" data-context="nigeria">
+                <span class="button-label nigeria">User B</span>
+                <img src="greyspace.png" alt="Nigeria default" class="default-icon">
+                <img src="greenspace.png" alt="Nigeria hover" class="hover-icon">
+                <img src="greenspace.png" alt="Nigeria active" class="active-icon">
+            </button>
+            <button class="context-button" data-context="philippines">
+                <span class="button-label philippines">User C</span>
+                <img src="greyspace.png" alt="Philippines default" class="default-icon">
+                <img src="pinkspace.png" alt="Philippines hover" class="hover-icon">
+                <img src="pinkspace.png" alt="Philippines active" class="active-icon">
+            </button>
+        </div>
+
+        <div id="map-container" style="position: relative;">
+            <div id="map-caption" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; font-size: 18px; font-weight: normal; color: #FF6B35; z-index: 100; pointer-events: none;">
+                The locations from where the AI fetches data for User A
+            </div>
+        </div>
+        <div class="tooltip" id="map-tooltip"></div>
+    </div>
+
+    <!-- PART 2: Three-Column Analysis -->
+    <div class="section" id="part2">
+        <div class="button-group wide sticky-buttons-part2" id="analysis-buttons">
+            <button class="context-button active" data-context="india">
+                <span class="button-label india">User A</span>
+                <img src="greyspace.png" alt="India default" class="default-icon">
+                <img src="orangespace.png" alt="India hover" class="hover-icon">
+                <img src="orangespace.png" alt="India active" class="active-icon">
+            </button>
+            <button class="context-button" data-context="nigeria">
+                <span class="button-label nigeria">User B</span>
+                <img src="greyspace.png" alt="Nigeria default" class="default-icon">
+                <img src="greenspace.png" alt="Nigeria hover" class="hover-icon">
+                <img src="greenspace.png" alt="Nigeria active" class="active-icon">
+            </button>
+            <button class="context-button" data-context="philippines">
+                <span class="button-label philippines">User C</span>
+                <img src="greyspace.png" alt="Philippines default" class="default-icon">
+                <img src="pinkspace.png" alt="Philippines hover" class="hover-icon">
+                <img src="pinkspace.png" alt="Philippines active" class="active-icon">
+            </button>
+        </div>
+
+        <div id="analysis-content">
+            <div class="write-up">When AI encounters culturally specific queries, it often fails to engage with the actual dilemma. Instead, it either explains cultural concepts without offering relevant guidance, or provides generic advice assuming all non-Anglophone practices are interchangeable. For example: When a Filipino user asks about pamanhikan (a specific pre-wedding tradition), AI may cite sources about Indian arranged marriages, Pakistani family customs, or Singaporean wedding planning—treating diverse cultural practices as equivalent simply because they're not Anglophone Centric.</div>
+            
+            <div class="column-grid" id="grid-category-a">
+                <div id="column-india-a" class="column-container active"></div>
+                <div id="column-nigeria-a" class="column-container"></div>
+                <div id="column-philippines-a" class="column-container"></div>
+            </div>
+
+            <div class="write-up">Even when AI discusses Global South practices, it frames them through Anglophone therapeutic vocabulary. These terms appear repeatedly across all three cultural contexts, presented as universal truths rather than culturally specific concepts.Boundaries, autonomy, financial individualism etc dominate therapeutic discourse, presented as objective truths applicable everywhere.</div>
+            
+            <div class="column-grid" id="grid-category-b">
+                <div id="column-india-b" class="column-container active"></div>
+                <div id="column-nigeria-b" class="column-container"></div>
+                <div id="column-philippines-b" class="column-container"></div>
+            </div>
+
+            <div class="write-up">When AI fetches sources that mention cultural practices, those sources still employ Anglophone frameworks to interpret them.The pattern is clear: Joint family arrangements or Pamanhikan invoke "boundaries." Owambe celebrations trigger "debt management." Anglophone therapeutic and financial frameworks are systematically imposed on Global South contexts, even when the sources claim to discuss cultural practices.</div>
+            
+            <div class="column-grid" id="grid-category-c">
+                <div id="column-india-c" class="column-container active"></div>
+                <div id="column-nigeria-c" class="column-container"></div>
+                <div id="column-philippines-c" class="column-container"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Interpretation Section -->
+    <div class="section" style="text-align: center; margin: 150px auto;">
+        <div style="font-size: 32px; font-weight: bold; color: #FFFFFF; margin-bottom: 40px;">What Does This Mean?</div>
+        <div style="font-size: 16px; line-height: 1.6; color: #808080; max-width: 900px; margin: 0 auto;">
+            AI retrieves what's most accessible in its training data but accessibility isn't neutral. Anglophone psychological discourse dominates because it's heavily digitized, published in English, and optimized for search engines. Non-Western therapeutic knowledge exists but remains undocumented as "legitimate psychology." Even when AI finds culturally specific sources, they've already adopted Western frameworks like "boundaries" to be taken seriously. Users seeking culturally relevant advice instead receive Western frameworks that pathologize their practices.
+        </div>
+    </div>
+
+    <!-- PART 3: Raw Data -->
+    <div class="section" id="part3">
+        <div class="header-xl" style="color: #FFFFFF;">RAW DATA</div>
+        <div class="subtext" style="font-size: 20px; margin-bottom: 50px;">What was the conversation?</div>
+
+        <div class="sticky-header-part3">
+            <div class="button-group" id="rawdata-buttons">
+                <button class="context-button active" data-context="india">
+                    <span class="button-label india">User A</span>
+                    <img src="greyspace.png" alt="India default" class="default-icon">
+                    <img src="orangespace.png" alt="India hover" class="hover-icon">
+                    <img src="orangespace.png" alt="India active" class="active-icon">
+                </button>
+                <button class="context-button" data-context="nigeria">
+                    <span class="button-label nigeria">User B</span>
+                    <img src="greyspace.png" alt="Nigeria default" class="default-icon">
+                    <img src="greenspace.png" alt="Nigeria hover" class="hover-icon">
+                    <img src="greenspace.png" alt="Nigeria active" class="active-icon">
+                </button>
+                <button class="context-button" data-context="philippines">
+                    <span class="button-label philippines">User C</span>
+                    <img src="greyspace.png" alt="Philippines default" class="default-icon">
+                    <img src="pinkspace.png" alt="Philippines hover" class="hover-icon">
+                    <img src="pinkspace.png" alt="Philippines active" class="active-icon">
+                </button>
+            </div>
+            <a href="#part1" class="back-to-top-sticky">↑ BACK TO TOP</a>
+        </div>
+
+        <div style="text-align: center; margin: 50px auto 80px auto;">
+            <div style="font-size: 24px; font-weight: bold; color: #FFFFFF; margin-bottom: 20px;">METHODOLOGY</div>
+            <div style="font-size: 15px; line-height: 1.6; color: #808080; max-width: 900px; margin: 0 auto 15px;">
+                Three users engaged AI in natural conversations about culturally specific dilemmas (4-5 turns each). AI provided advice and cited sources to support it. We analyzed: geographic origin, cultural relevance, and psychological frameworks present in cited sources.
+            </div>
+            <div style="font-size: 14px; font-style: italic; color: #808080;">
+                These model responses had variations when run multiple times, but one run is displayed here.
+            </div>
+        </div>
+
+        <div id="rawdata-container"></div>
+    </div>
+
+    <script>
+        let currentContext = 'india';
+        let data = {};
+        let animatedContexts = {}; // Track which contexts have been animated
+
+        const COLORS = {
+            india: '#FF6B35',
+            nigeria: '#6cff39',
+            philippines: '#ff5bf5'
+        };
+
+        const COUNTRY_COORDS = {
+            'US': {lat: 37.0902, lon: -95.7129},
+            'India': {lat: 20.5937, lon: 78.9629},
+            'Nigeria': {lat: 9.0820, lon: 8.6753},
+            'Philippines': {lat: 12.8797, lon: 121.7740},
+            'UK': {lat: 55.3781, lon: -3.4360},
+            'Canada': {lat: 56.1304, lon: -106.3468},
+            'Australia': {lat: -25.2744, lon: 133.7751},
+            'Pakistan': {lat: 30.3753, lon: 69.3451},
+            'Singapore': {lat: 1.3521, lon: 103.8198},
+            'Spain': {lat: 40.4637, lon: -3.7492},
+            'Germany': {lat: 51.1657, lon: 10.4515},
+            'France': {lat: 46.2276, lon: 2.2137},
+            'Mexico': {lat: 23.6345, lon: -102.5528},
+            'New Zealand': {lat: -40.9006, lon: 174.8860},
+            'Unknown': {lat: 20.0, lon: -30.0}
+        };
+
+        // Setup button handlers IMMEDIATELY
+        document.querySelectorAll('.context-button').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const context = btn.dataset.context;
+                
+                // Update button states
+                document.querySelectorAll('.context-button').forEach(b => {
+                    b.classList.toggle('active', b.dataset.context === context);
+                });
+                
+                currentContext = context;
+                
+                // Update parts
+                if (Object.keys(data).length > 0) {
+                    updateMap(context);
+                    updateAnalysis(context);
+                    updateRawData(context);
+                }
+            });
+        });
+
+        // Load JSON files
+        Promise.all([
+            fetch('indian_therapy_bias_results.json').then(r => r.json()),
+            fetch('nigerian_therapy_bias_results.json').then(r => r.json()),
+            fetch('filipino_therapy_bias_results.json').then(r => r.json())
+        ]).then(([indiaData, nigeriaData, philippinesData]) => {
+            data = {
+                india: indiaData,
+                nigeria: nigeriaData,
+                philippines: philippinesData
+            };
+
+            drawWorldMap();
+            updateMap('india');
+            updateAnalysis('india');
+            updateRawData('india');
+
+            // Setup scroll listener for unsticking Part 2 buttons
+            setupScrollBehavior();
+        }).catch(error => {
+            console.error('Failed to load data:', error);
+            console.log('Run a local server to fix CORS issues');
+        });
+
+        function setupScrollBehavior() {
+            const part2Buttons = document.querySelector('.sticky-buttons-part2');
+            const part3 = document.getElementById('part3');
+            
+            window.addEventListener('scroll', () => {
+                const part3Top = part3.getBoundingClientRect().top;
+                
+                if (part3Top <= 0) {
+                    part2Buttons.classList.add('unstick');
+                } else {
+                    part2Buttons.classList.remove('unstick');
+                }
+            });
+        }
+
+        function drawWorldMap() {
+            const layout = {
+                geo: {
+                    projection: {
+                        type: 'natural earth'
+                    },
+                    showland: true,
+                    landcolor: '#1a1a1a',
+                    showocean: true,
+                    oceancolor: '#121212',
+                    showcountries: true,
+                    countrycolor: '#404040',
+                    countrywidth: 0.5,
+                    showlakes: false,
+                    showrivers: false,
+                    bgcolor: '#121212',
+                    showframe: false,
+                    coastlinewidth: 0
+                },
+                paper_bgcolor: '#121212',
+                plot_bgcolor: '#121212',
+                margin: {t: 0, b: 0, l: 0, r: 0},
+                height: 800,
+                dragmode: 'pan',
+                hovermode: 'closest'
+            };
+
+            const config = {
+                displayModeBar: false,
+                responsive: true,
+                scrollZoom: true,
+                doubleClick: 'zoom'
+            };
+
+            Plotly.newPlot('map-container', [], layout, config);
+        }
+
+        function updateMap(context) {
+            const urls = data[context].url_analysis;
+            
+            const countryCounts = {};
+            urls.forEach(url => {
+                const country = url.country || 'Unknown';
+                countryCounts[country] = (countryCounts[country] || 0) + 1;
+            });
+
+            const total = urls.length;
+            const maxCount = Math.max(...Object.values(countryCounts));
+
+            const lats = [];
+            const lons = [];
+            const sizes = [];
+            const texts = [];
+            const colors = [];
+
+            for (const [country, count] of Object.entries(countryCounts)) {
+                if (COUNTRY_COORDS[country]) {
+                    const pct = (count / total) * 100;
+                    const size = 15 + (count / maxCount) * 35;
+
+                    lats.push(COUNTRY_COORDS[country].lat);
+                    lons.push(COUNTRY_COORDS[country].lon);
+                    sizes.push(size);
+                    
+                    const text = country === 'Unknown' 
+                        ? `${pct.toFixed(1)}%<br>Unknown locations due to<br>personal websites, 404 errors,<br>or inaccessible domains`
+                        : `${country}: ${pct.toFixed(1)}%`;
+                    texts.push(text);
+                    colors.push(COLORS[context]);
+                }
+            }
+
+            const trace = {
+                type: 'scattergeo',
+                mode: 'markers',
+                lon: lons,
+                lat: lats,
+                marker: {
+                    size: sizes,
+                    color: colors,
+                    line: {
+                        width: 0
+                    },
+                    opacity: 0.7
+                },
+                text: texts,
+                hoverinfo: 'text',
+                hovertemplate: '<span style="color:' + COLORS[context] + '; font-size:18px; font-weight:bold;">%{text}</span><extra></extra>'
+            };
+
+            const layout = {
+                geo: {
+                    projection: {
+                        type: 'natural earth'
+                    },
+                    showland: true,
+                    landcolor: '#1a1a1a',
+                    showocean: true,
+                    oceancolor: '#121212',
+                    showcountries: true,
+                    countrycolor: '#404040',
+                    countrywidth: 0.5,
+                    showlakes: false,
+                    showrivers: false,
+                    bgcolor: '#121212',
+                    showframe: false,
+                    coastlinewidth: 0
+                },
+                paper_bgcolor: '#121212',
+                plot_bgcolor: '#121212',
+                margin: {t: 0, b: 0, l: 0, r: 0},
+                height: 800,
+                dragmode: 'pan',
+                hovermode: 'closest',
+                showlegend: false,
+                hoverlabel: {
+                    bgcolor: 'rgba(0, 0, 0, 0.95)',
+                    font: {
+                        size: 18,
+                        family: 'Courier Prime, Monaco, monospace',
+                        color: COLORS[context]
+                    },
+                    bordercolor: 'rgba(0, 0, 0, 0)'
+                }
+            };
+
+            Plotly.react('map-container', [trace], layout);
+
+            // Update map caption
+            const captions = {
+                india: 'The locations from where the AI fetches data for User A',
+                nigeria: 'The locations from where the AI fetches data for User B',
+                philippines: 'The locations from where the AI fetches data for User C'
+            };
+            const caption = document.getElementById('map-caption');
+            if (caption) {
+                caption.textContent = captions[context];
+                caption.style.color = COLORS[context];
+            }
+        }
+
+        function generateCategoryA(context) {
+            const contextData = data[context];
+            const urls = contextData.url_analysis;
+            let html = '';
+
+            const categories = {
+                'addresses_user_dilemma': 'ADDRESSES USER\'S CONCERN',
+                'defines_practice': 'EXPLAINS CONCEPTS',
+                'generic_advice': 'GENERIC ADVICE',
+                'not_related': 'FAR FROM USER\'S CONCERN'
+            };
+
+            const catCounts = {};
+            let totalCategorized = 0;
+            
+            urls.forEach(url => {
+                if (url.cultural_context && categories[url.cultural_context]) {
+                    catCounts[url.cultural_context] = (catCounts[url.cultural_context] || 0) + 1;
+                    totalCategorized++;
+                }
+            });
+
+            const sorted = Object.entries(catCounts).sort((a, b) => b[1] - a[1]);
+            
+            sorted.forEach(([key, count]) => {
+                const pct = (count / urls.length) * 100;
+                html += `<div class="data-item" style="color: ${COLORS[context]}" data-target="${pct.toFixed(0)}">${categories[key]}: <span class="percentage">0</span>%</div>`;
+            });
+
+            // Bar chart
+            html += '<div class="bar-chart-container">';
+            sorted.forEach(([key, count], index) => {
+                const pct = (count / urls.length) * 100;
+                const height = (pct / 100) * 200; // Max 200px
+                // Better gradient: 100% to 40% brightness
+                const brightness = 100 - (index * 15);
+                const barColor = adjustBrightness(COLORS[context], brightness);
+                html += `<div class="bar" style="height: 0px; background-color: ${barColor};" data-target-height="${height}" data-delay="${index * 100}"></div>`;
+            });
+            html += '</div>';
+
+            const unknownPct = ((urls.length - totalCategorized) / urls.length) * 100;
+            const unknownColor = adjustBrightness(COLORS[context], 30);
+            html += `<div class="unknown-text" style="color: ${unknownColor}">UNKNOWN: ${unknownPct.toFixed(0)}%</div>`;
+
+            return html;
+        }
+
+        function generateCategoryB(context) {
+            const contextData = data[context];
+            const urls = contextData.url_analysis;
+            let html = '';
+
+            const westernKeywords = {};
+            urls.forEach(url => {
+                if (url.western_keywords) {
+                    url.western_keywords.forEach(kw => {
+                        westernKeywords[kw] = (westernKeywords[kw] || 0) + 1;
+                    });
+                }
+            });
+
+            const sortedWestern = Object.entries(westernKeywords)
+                .sort((a, b) => b[1] - a[1])
+                .slice(0, 10);
+
+            sortedWestern.forEach(([keyword, count]) => {
+                const pct = (count / urls.length) * 100;
+                html += `<div class="data-item" style="color: ${COLORS[context]}" data-target="${pct.toFixed(0)}">${keyword.toUpperCase()}: <span class="percentage">0</span>%</div>`;
+            });
+
+            // Bar chart for Category B
+            html += '<div class="bar-chart-container">';
+            sortedWestern.forEach(([keyword, count], index) => {
+                const pct = (count / urls.length) * 100;
+                const height = (pct / 100) * 200;
+                // Better gradient: 100% to 40% brightness over 10 bars
+                const brightness = 100 - (index * 6);
+                const barColor = adjustBrightness(COLORS[context], brightness);
+                html += `<div class="bar" style="height: 0px; background-color: ${barColor};" data-target-height="${height}" data-delay="${index * 100}"></div>`;
+            });
+            html += '</div>';
+
+            return html;
+        }
+
+        function generateCategoryC(context) {
+            const contextData = data[context];
+            const urls = contextData.url_analysis;
+            let html = '';
+
+            const culturalConcepts = getCulturalConcepts(context);
+
+            culturalConcepts.forEach(conceptKey => {
+                const conceptUrls = urls.filter(url => {
+                    if (conceptKey === 'owambe' && context === 'nigeria') {
+                        return url.matched_concepts &&
+                               (url.matched_concepts.owambe ||
+                                url.matched_concepts.naira ||
+                                url.matched_concepts.spraying_money);
+                    }
+                    return url.matched_concepts && url.matched_concepts[conceptKey];
+                });
+
+                if (conceptUrls.length === 0) return;
+
+                const displayNames = {
+                    'owambe': 'OWAMBE/SPRAYING_MONEY',
+                    'joint_family': 'JOINT FAMILY',
+                    'seeking_approval': 'SEEKING APPROVAL FROM FAMILY',
+                    'rupees': 'MONEY DISCUSSION WITH FAMILY',
+                    'family_obligations': 'FAMILY OBLIGATIONS AS ELDEST SON',
+                    'elder_care': 'ELDER CARE WHEN FATHER MOVES IN',
+                    'living_with_family': 'LIVING WITH FAMILY AFTER MARRIAGE',
+                    'preparing_for_baby': 'PREPARING FOR BABY WITH PARENTS',
+                    'pamanhikan': 'PAMANHIKAN'
+                };
+                const displayName = displayNames[conceptKey] || conceptKey.toUpperCase().replace(/_/g, ' ');
+                const conceptPct = (conceptUrls.length / urls.length) * 100;
+
+                html += `
+                    <div class="concept-tree">
+                        <div class="concept-header" style="color: ${COLORS[context]}" data-target="${conceptPct.toFixed(0)}" data-url-count="${conceptUrls.length}">
+                            ${displayName} (<span class="percentage">0</span> URLs, <span class="percentage-value">0</span>%)
+                        </div>
+                `;
+
+                const westernInConcept = {};
+                conceptUrls.forEach(url => {
+                    if (url.western_keywords) {
+                        url.western_keywords.forEach(kw => {
+                            westernInConcept[kw] = (westernInConcept[kw] || 0) + 1;
+                        });
+                    }
+                });
+
+                // Filter out financial keywords ONLY for India's joint_family
+                let sortedWesternConcept;
+                if (context === 'india' && conceptKey === 'joint_family') {
+                    const financialKeywords = ['Financial Planning', 'Savings', 'financial independence', 'financial goals', 'budget'];
+                    sortedWesternConcept = Object.entries(westernInConcept)
+                        .filter(([keyword]) => !financialKeywords.includes(keyword))
+                        .sort((a, b) => b[1] - a[1])
+                        .slice(0, 5);
+                } else {
+                    sortedWesternConcept = Object.entries(westernInConcept)
+                        .sort((a, b) => b[1] - a[1])
+                        .slice(0, 5);
+                }
+
+                sortedWesternConcept.forEach(([keyword, count], idx) => {
+                    const pct = (count / conceptUrls.length) * 100;
+                    const prefix = idx === sortedWesternConcept.length - 1 ? '└─' : '├─';
+                    html += `<div class="concept-child" style="color: ${COLORS[context]}" data-target-count="${count}" data-target="${pct.toFixed(0)}">${prefix} ${keyword}: <span class="percentage-count">0</span> URLs (<span class="percentage">0</span>%)</div>`;
+                });
+
+                html += '</div>';
+            });
+
+            return html;
+        }
+
+        function updateAnalysis(context) {
+            // Update visibility for all grids
+            ['a', 'b', 'c'].forEach(category => {
+                ['india', 'nigeria', 'philippines'].forEach(ctx => {
+                    const col = document.getElementById(`column-${ctx}-${category}`);
+                    col.classList.toggle('active', ctx === context);
+                    
+                    // Generate content if empty
+                    if (col.innerHTML === '') {
+                        if (category === 'a') {
+                            col.innerHTML = generateCategoryA(ctx);
+                        } else if (category === 'b') {
+                            col.innerHTML = generateCategoryB(ctx);
+                        } else if (category === 'c') {
+                            col.innerHTML = generateCategoryC(ctx);
+                        }
+                    }
+                });
+            });
+            
+            // Trigger animations EVERY TIME
+            setTimeout(() => {
+                animatePercentages(context, 'a');
+                animateBars(context, 'a');
+                animatePercentages(context, 'b');
+                animateBars(context, 'b');
+                animateCategoryC(context);
+            }, 100);
+        }
+
+        function animatePercentages(context, category) {
+            const column = document.getElementById(`column-${context}-${category}`);
+            const dataItems = column.querySelectorAll('[data-target]');
+            
+            dataItems.forEach((item, index) => {
+                const target = parseInt(item.dataset.target);
+                const percentageSpan = item.querySelector('.percentage');
+                if (!percentageSpan) return;
+                
+                let current = 0;
+                const duration = 800;
+                const steps = 60;
+                const increment = target / steps;
+                const stepTime = duration / steps;
+                
+                setTimeout(() => {
+                    const interval = setInterval(() => {
+                        current += increment;
+                        if (current >= target) {
+                            percentageSpan.textContent = target;
+                            clearInterval(interval);
+                        } else {
+                            percentageSpan.textContent = Math.floor(current);
+                        }
+                    }, stepTime);
+                }, index * 50);
+            });
+        }
+
+        function animateCategoryC(context) {
+            const column = document.getElementById(`column-${context}-c`);
+            
+            // Animate concept headers
+            const headers = column.querySelectorAll('.concept-header[data-target]');
+            headers.forEach((header, idx) => {
+                const target = parseInt(header.dataset.target);
+                const urlCount = parseInt(header.dataset.urlCount);
+                const percentageSpan = header.querySelector('.percentage');
+                const percentageValueSpan = header.querySelector('.percentage-value');
+                
+                if (!percentageSpan || !percentageValueSpan) return;
+                
+                let current = 0;
+                const duration = 800;
+                const steps = 60;
+                const increment = target / steps;
+                const stepTime = duration / steps;
+                
+                setTimeout(() => {
+                    const interval = setInterval(() => {
+                        current += increment;
+                        if (current >= target) {
+                            percentageSpan.textContent = urlCount;
+                            percentageValueSpan.textContent = target;
+                            clearInterval(interval);
+                        } else {
+                            percentageSpan.textContent = Math.floor((current / target) * urlCount);
+                            percentageValueSpan.textContent = Math.floor(current);
+                        }
+                    }, stepTime);
+                }, idx * 100);
+            });
+            
+            // Animate concept children
+            const children = column.querySelectorAll('.concept-child[data-target]');
+            children.forEach((child, idx) => {
+                const target = parseInt(child.dataset.target);
+                const targetCount = parseInt(child.dataset.targetCount);
+                const percentageSpan = child.querySelector('.percentage');
+                const countSpan = child.querySelector('.percentage-count');
+                
+                if (!percentageSpan || !countSpan) return;
+                
+                let current = 0;
+                const duration = 800;
+                const steps = 60;
+                const increment = target / steps;
+                const stepTime = duration / steps;
+                
+                setTimeout(() => {
+                    const interval = setInterval(() => {
+                        current += increment;
+                        if (current >= target) {
+                            percentageSpan.textContent = target;
+                            countSpan.textContent = targetCount;
+                            clearInterval(interval);
+                        } else {
+                            percentageSpan.textContent = Math.floor(current);
+                            countSpan.textContent = Math.floor((current / target) * targetCount);
+                        }
+                    }, stepTime);
+                }, idx * 50);
+            });
+        }
+
+        function animateBars(context, category) {
+            const column = document.getElementById(`column-${context}-${category}`);
+            const bars = column.querySelectorAll('.bar[data-target-height]');
+            
+            bars.forEach(bar => {
+                const targetHeight = bar.dataset.targetHeight;
+                const delay = parseInt(bar.dataset.delay);
+                
+                // Reset to 0 first
+                bar.style.height = '0px';
+                
+                setTimeout(() => {
+                    bar.style.height = targetHeight + 'px';
+                }, delay + 50);
+            });
+        }
+
+        function getCulturalConcepts(context) {
+            if (context === 'india') {
+                return ['joint_family', 'seeking_approval', 'rupees'];
+            } else if (context === 'nigeria') {
+                return ['owambe', 'family_obligations', 'elder_care'];
+            } else if (context === 'philippines') {
+                return ['pamanhikan', 'living_with_family', 'preparing_for_baby'];
+            }
+            return [];
+        }
+
+        function adjustBrightness(color, percent) {
+            // Convert hex to RGB
+            const num = parseInt(color.replace('#',''), 16);
+            const r = (num >> 16);
+            const g = (num >> 8 & 0x00FF);
+            const b = (num & 0x0000FF);
+            
+            // Adjust brightness
+            const factor = percent / 100;
+            const newR = Math.floor(r * factor);
+            const newG = Math.floor(g * factor);
+            const newB = Math.floor(b * factor);
+            
+            return `rgb(${newR}, ${newG}, ${newB})`;
+        }
+
+        function updateRawData(context) {
+            const contextData = data[context];
+            const container = document.getElementById('rawdata-container');
+            let html = '';
+
+            // Get conversation turns from first_conversation
+            const conversation = contextData.first_conversation;
+            
+            // Display each turn
+            conversation.forEach((turn, idx) => {
+                const turnNum = idx + 1;
+                html += `
+                    <div class="turn-section">
+                        <div class="turn-header">TURN ${turnNum}</div>
+                        <div class="dialogue" style="color: ${COLORS[context]}">
+                            <span class="dialogue-label">USER:</span> ${turn.question}
+                        </div>
+                        <div class="dialogue" style="color: #808080">
+                            <span class="dialogue-label">AI:</span> ${turn.advice}
+                        </div>
+                    </div>
+                `;
+            });
+
+            // URLs Section
+            html += `
+                <div class="url-section-header">THE URLs THE MODEL FETCHES TO BACKUP THEIR ADVICE</div>
+                <div class="url-section-subheader">Backtracking where data originates</div>
+            `;
+
+            // Get URLs organized by turn from url_collection_summary
+            const urlsByTurn = contextData.url_collection_summary.urls_by_turn;
+            
+            // Get analyzed URLs with metadata
+            const analyzedUrls = {};
+            contextData.url_analysis.forEach(urlData => {
+                analyzedUrls[urlData.url] = urlData;
+            });
+
+            // Display URLs by turn
+            Object.keys(urlsByTurn).sort((a, b) => parseInt(a) - parseInt(b)).forEach(turnNum => {
+                html += `<div class="url-turn-header">TURN ${turnNum}</div>`;
+
+                urlsByTurn[turnNum].forEach(url => {
+                    const urlData = analyzedUrls[url] || {};
+                    
+                    const relevanceMap = {
+                        'addresses_user_dilemma': '⭐ Directly addresses the user\'s specific concern',
+                        'defines_practice': '📚 Explains the cultural practice (educational)',
+                        'generic_advice': '🌍 Provides general advice (not culturally specific)',
+                        'not_related': '📍 Distant from user\'s dilemma'
+                    };
+
+                    html += `
+                        <div class="url-entry">
+                            <a href="${url}" target="_blank" class="url-link" style="color: ${COLORS[context]}">🔗 ${url}</a>
+                            <div class="url-meta">
+                                ${urlData.status ? `<div><span class="url-meta-label">STATUS:</span> ${urlData.status}</div>` : ''}
+                                ${urlData.cultural_context ? `<div><span class="url-meta-label">RELEVANCE:</span> ${relevanceMap[urlData.cultural_context] || 'Unknown'}</div>` : ''}
+                                ${urlData.western_keywords && urlData.western_keywords.length > 0 ? 
+                                    `<div><span class="url-meta-label">ANGLOPHONE FRAMEWORKS FOUND:</span> ${urlData.western_keywords.join(', ')}</div>` : ''}
+                            </div>
+                        </div>
+                    `;
+                });
+            });
+
+            container.innerHTML = html;
+        }
+    </script>
+
+</body>
+</html>

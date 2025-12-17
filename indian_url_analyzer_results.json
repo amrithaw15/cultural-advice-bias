@@ -1,0 +1,729 @@
+[
+  {
+    "url": "https://www.usbank.com/financialiq/plan-your-future/manage-wealth/multigenerational-household-financial-planning-strategies.html?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "US",
+    "evidence": [
+      "Checking /corporate-and-commercial-bank...",
+      "about/contact page phone: US/Canada",
+      "Checking /investment-services/contact-u...",
+      "Checking /about-us-bank.html..."
+    ],
+    "cultural_context": "defines_practice",
+    "matched_keywords": [
+      "joint family",
+      "extended family living",
+      "multigenerational household"
+    ],
+    "matched_concepts": {
+      "joint_family": [
+        "joint family",
+        "extended family living",
+        "multigenerational household"
+      ]
+    },
+    "unique_concept_count": 1,
+    "western_keywords": []
+  },
+  {
+    "url": "https://www.kotak811.com/insights/savings/joint-family-financial-planning-guide?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "India",
+    "evidence": [
+      "Known Indian organization: www.kotak811.com"
+    ],
+    "cultural_context": "defines_practice",
+    "matched_keywords": [
+      "joint family",
+      "joint family system",
+      "extended family living",
+      "India"
+    ],
+    "matched_concepts": {
+      "joint_family": [
+        "joint family",
+        "joint family system",
+        "extended family living"
+      ],
+      "geographic_india": [
+        "India"
+      ]
+    },
+    "unique_concept_count": 2,
+    "western_keywords": [
+      "individual goals"
+    ]
+  },
+  {
+    "url": "https://www.flanaganstatebank.com/2024/06/18/budgeting-strategies-for-blended-and-non-traditional-families-navigating-financial-unity/?utm_source=openai",
+    "status": "error_403",
+    "status_code": 403,
+    "country": "Unknown",
+    "evidence": [
+      "HTTP status code: 403"
+    ],
+    "cultural_context": "unknown",
+    "matched_keywords": [],
+    "matched_concepts": {},
+    "unique_concept_count": 0,
+    "western_keywords": []
+  },
+  {
+    "url": "https://plutuseducation.com/blog/advantages-and-disadvantages-of-joint-family/?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "Unknown",
+    "evidence": [],
+    "cultural_context": "addresses_user_dilemma",
+    "matched_keywords": [
+      "joint family",
+      "joint family system",
+      "extended family living",
+      "career advancement",
+      "higher education",
+      "career growth",
+      "India"
+    ],
+    "matched_concepts": {
+      "joint_family": [
+        "joint family",
+        "joint family system",
+        "extended family living"
+      ],
+      "career": [
+        "career advancement",
+        "higher education",
+        "career growth"
+      ],
+      "geographic_india": [
+        "India"
+      ]
+    },
+    "unique_concept_count": 3,
+    "western_keywords": [
+      "boundaries",
+      "personal space",
+      "Open Communication",
+      "Interference",
+      "financial independence"
+    ]
+  },
+  {
+    "url": "https://timesofindia.indiatimes.com/life-style/relationships/love-sex/7-things-to-keep-in-mind-while-living-in-a-joint-family/photostory/108144987.cms?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "India",
+    "evidence": [
+      "Known Indian organization: timesofindia.indiatimes.com",
+      "Checking https://timesofindia.indiatime...",
+      "Checking https://timesofindia.indiatime...",
+      "Checking https://timesofindia.indiatime..."
+    ],
+    "cultural_context": "addresses_user_dilemma",
+    "matched_keywords": [
+      "joint family",
+      "extended family living",
+      "rupee",
+      "rupees",
+      "₹",
+      "lakhs",
+      "INR",
+      "India"
+    ],
+    "matched_concepts": {
+      "joint_family": [
+        "joint family",
+        "extended family living"
+      ],
+      "rupees": [
+        "rupee",
+        "rupees",
+        "₹",
+        "lakhs",
+        "INR"
+      ],
+      "geographic_india": [
+        "India"
+      ]
+    },
+    "unique_concept_count": 3,
+    "western_keywords": [
+      "boundaries",
+      "personal space"
+    ]
+  },
+  {
+    "url": "https://economictimes.indiatimes.com/wealth/personal-finance-news/6-rules-that-can-create-consensus-in-family-on-managing-income-saving-and-investment/articleshow/122254065.cms?UTM_Campaign=RSS_Feed&UTM_Medium=Referral&UTM_Source=Google_Newsstand&utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "India",
+    "evidence": [
+      "Known Indian organization: economictimes.indiatimes.com",
+      "Checking https://economictimes.indiatim...",
+      "Checking https://economictimes.indiatim...",
+      "Checking https://economictimes.indiatim..."
+    ],
+    "cultural_context": "defines_practice",
+    "matched_keywords": [
+      "rupee",
+      "rupees",
+      "₹",
+      "lakhs",
+      "lakh",
+      "India"
+    ],
+    "matched_concepts": {
+      "rupees": [
+        "rupee",
+        "rupees",
+        "₹",
+        "lakhs",
+        "lakh"
+      ],
+      "geographic_india": [
+        "India"
+      ]
+    },
+    "unique_concept_count": 2,
+    "western_keywords": [
+      "Open Communication"
+    ]
+  },
+  {
+    "url": "https://www.forbes.com/sites/tracybrower/2023/12/18/education-is-still-important-for-your-career-5-compelling-benefits/?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "US",
+    "evidence": [
+      "Known US organization: www.forbes.com",
+      "Checking https://www.forbes.com/contact...",
+      "Checking https://www.forbes.com/contact...",
+      "Checking https://www.forbes.com/fdc/con..."
+    ],
+    "cultural_context": "defines_practice",
+    "matched_keywords": [
+      "promotion",
+      "India"
+    ],
+    "matched_concepts": {
+      "career": [
+        "promotion"
+      ],
+      "geographic_india": [
+        "India"
+      ]
+    },
+    "unique_concept_count": 2,
+    "western_keywords": [
+      "Self Care"
+    ]
+  },
+  {
+    "url": "https://www.uc.edu/news/articles/uco/5-benefits-of-continuing-education-for-career-advancement.html?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "US",
+    "evidence": [
+      "Domain ends with .edu: www.uc.edu",
+      "Physical address found: University of Cincinnati 2600 Clifton Ave. Cincinn...",
+      "Physical address found: University of Cincinnati | 2600 Clifton Ave. | Cin...",
+      "Physical address found: University of Cincinnati 2600 Clifton Ave. Cincinn...",
+      "Phone number found: US/Canada",
+      "Checking /news/media-contacts.html...",
+      "about/contact page address: University of Cincinnati Edwards 2, Suit...",
+      "about/contact page address: University of Cincinnati | 2600 Clifton ...",
+      "about/contact page phone: US/Canada",
+      "Checking https://www.uc.edu/about/ucit/...",
+      "about/contact page address: University of Cincinnati 51 Goodman Dr. ...",
+      "about/contact page address: University of Cincinnati | 2600 Clifton ...",
+      "about/contact page phone: US/Canada",
+      "Checking https://www.uc.edu/about/ethic...",
+      "about/contact page address: University of Cincinnati 2600 Clifton Av...",
+      "about/contact page address: University of Cincinnati | 2600 Clifton ...",
+      "about/contact page phone: US/Canada"
+    ],
+    "cultural_context": "generic_advice",
+    "matched_keywords": [
+      "career advancement",
+      "promotion",
+      "professional development",
+      "career growth"
+    ],
+    "matched_concepts": {
+      "career": [
+        "career advancement",
+        "promotion",
+        "professional development",
+        "career growth"
+      ]
+    },
+    "unique_concept_count": 1,
+    "western_keywords": []
+  },
+  {
+    "url": "https://careercatalyst.asu.edu/newsroom/career/the-surprising-benefits-of-continuing-education/?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "US",
+    "evidence": [
+      "Domain ends with .edu: careercatalyst.asu.edu",
+      "Checking /contact-us/...",
+      "about/contact page phone: US/Canada",
+      "Checking /contact-us/...",
+      "about/contact page phone: US/Canada",
+      "Checking /contact-us/...",
+      "about/contact page phone: US/Canada"
+    ],
+    "cultural_context": "generic_advice",
+    "matched_keywords": [
+      "career advancement",
+      "promotion",
+      "professional development"
+    ],
+    "matched_concepts": {
+      "career": [
+        "career advancement",
+        "promotion",
+        "professional development"
+      ]
+    },
+    "unique_concept_count": 1,
+    "western_keywords": []
+  },
+  {
+    "url": "https://calcwise.finance/life-stage-financial-planning/joint-family-financial-management/?utm_source=openai",
+    "status": "error_415",
+    "status_code": 415,
+    "country": "Unknown",
+    "evidence": [
+      "HTTP status code: 415"
+    ],
+    "cultural_context": "unknown",
+    "matched_keywords": [],
+    "matched_concepts": {},
+    "unique_concept_count": 0,
+    "western_keywords": []
+  },
+  {
+    "url": "https://www.livemint.com/money/personal-finance/financial-independence-family-finances-financial-enmeshment-financial-literacy-family-budget-family-money-dynamics-11731166569582.html?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "India",
+    "evidence": [
+      "Known Indian organization: www.livemint.com",
+      "Checking https://www.livemint.com/Objec...",
+      "about/contact page address: 📲 Subscribe by messaging 'NEWMINT' to 54...",
+      "about/contact page address: Grievance Redressal...",
+      "Checking https://www.livemint.com/Objec...",
+      "about/contact page address: 📲 Subscribe by messaging 'NEWMINT' to 54...",
+      "about/contact page address: Grievance Redressal...",
+      "Checking https://www.livemint.com/Objec...",
+      "Content analysis suggested: US (but known organization is India)"
+    ],
+    "cultural_context": "defines_practice",
+    "matched_keywords": [
+      "joint family",
+      "joint family system",
+      "extended family living",
+      "India"
+    ],
+    "matched_concepts": {
+      "joint_family": [
+        "joint family",
+        "joint family system",
+        "extended family living"
+      ],
+      "geographic_india": [
+        "India"
+      ]
+    },
+    "unique_concept_count": 2,
+    "western_keywords": [
+      "boundaries",
+      "set boundaries",
+      "financial independence"
+    ]
+  },
+  {
+    "url": "https://www.kotak811.com/insights/savings/joint-family-financial-planning-guide?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "India",
+    "evidence": [
+      "Known Indian organization: www.kotak811.com"
+    ],
+    "cultural_context": "defines_practice",
+    "matched_keywords": [
+      "joint family",
+      "joint family system",
+      "extended family living",
+      "India"
+    ],
+    "matched_concepts": {
+      "joint_family": [
+        "joint family",
+        "joint family system",
+        "extended family living"
+      ],
+      "geographic_india": [
+        "India"
+      ]
+    },
+    "unique_concept_count": 2,
+    "western_keywords": [
+      "individual goals"
+    ]
+  },
+  {
+    "url": "https://economictimes.indiatimes.com/wealth/plan/money-relationships-how-to-financially-support-your-parents-after-your-marriage/articleshow/70616032.cms?from=mdr&utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "India",
+    "evidence": [
+      "Known Indian organization: economictimes.indiatimes.com",
+      "Checking https://economictimes.indiatim...",
+      "Checking https://economictimes.indiatim...",
+      "Checking https://economictimes.indiatim..."
+    ],
+    "cultural_context": "defines_practice",
+    "matched_keywords": [
+      "rupees",
+      "₹",
+      "lakhs",
+      "lakh",
+      "India"
+    ],
+    "matched_concepts": {
+      "rupees": [
+        "rupees",
+        "₹",
+        "lakhs",
+        "lakh"
+      ],
+      "geographic_india": [
+        "India"
+      ]
+    },
+    "unique_concept_count": 2,
+    "western_keywords": [
+      "Assert",
+      "financial independence"
+    ]
+  },
+  {
+    "url": "https://www.blog.mstutor.in/financial-planning-for-joint-families/?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "India",
+    "evidence": [
+      "Known Indian organization: www.blog.mstutor.in",
+      "Checking https://www.mstutor.in/contact...",
+      "Checking https://www.mstutor.in/contact...",
+      "Checking https://www.mstutor.in/about-u..."
+    ],
+    "cultural_context": "addresses_user_dilemma",
+    "matched_keywords": [
+      "joint family",
+      "joint family system",
+      "extended family living",
+      "rupees",
+      "₹",
+      "lakhs",
+      "career growth",
+      "India"
+    ],
+    "matched_concepts": {
+      "joint_family": [
+        "joint family",
+        "joint family system",
+        "extended family living"
+      ],
+      "rupees": [
+        "rupees",
+        "₹",
+        "lakhs"
+      ],
+      "career": [
+        "career growth"
+      ],
+      "geographic_india": [
+        "India"
+      ]
+    },
+    "unique_concept_count": 4,
+    "western_keywords": []
+  },
+  {
+    "url": "https://timesofindia.indiatimes.com/life-style/relationships/web-stories/7-rules-one-should-not-break-in-a-joint-family/photostory/104909937.cms?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "India",
+    "evidence": [
+      "Known Indian organization: timesofindia.indiatimes.com"
+    ],
+    "cultural_context": "defines_practice",
+    "matched_keywords": [
+      "joint family",
+      "extended family living",
+      "India"
+    ],
+    "matched_concepts": {
+      "joint_family": [
+        "joint family",
+        "extended family living"
+      ],
+      "geographic_india": [
+        "India"
+      ]
+    },
+    "unique_concept_count": 2,
+    "western_keywords": [
+      "boundaries",
+      "personal boundaries",
+      "Open Communication"
+    ]
+  },
+  {
+    "url": "https://www.livemint.com/money/personal-finance/financial-independence-family-finances-financial-enmeshment-financial-literacy-family-budget-family-money-dynamics-11731166569582.html?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "India",
+    "evidence": [
+      "Known Indian organization: www.livemint.com",
+      "Checking https://www.livemint.com/Objec...",
+      "about/contact page address: 📲 Subscribe by messaging 'NEWMINT' to 54...",
+      "about/contact page address: Grievance Redressal...",
+      "Checking https://www.livemint.com/Objec...",
+      "about/contact page address: 📲 Subscribe by messaging 'NEWMINT' to 54...",
+      "about/contact page address: Grievance Redressal...",
+      "Checking https://www.livemint.com/Objec...",
+      "Content analysis suggested: US (but known organization is India)"
+    ],
+    "cultural_context": "defines_practice",
+    "matched_keywords": [
+      "joint family",
+      "joint family system",
+      "extended family living",
+      "India"
+    ],
+    "matched_concepts": {
+      "joint_family": [
+        "joint family",
+        "joint family system",
+        "extended family living"
+      ],
+      "geographic_india": [
+        "India"
+      ]
+    },
+    "unique_concept_count": 2,
+    "western_keywords": [
+      "boundaries",
+      "set boundaries",
+      "financial independence"
+    ]
+  },
+  {
+    "url": "https://www.usbank.com/financialiq/plan-your-future/manage-wealth/multigenerational-household-financial-planning-strategies.html?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "US",
+    "evidence": [
+      "Checking /corporate-and-commercial-bank...",
+      "about/contact page phone: US/Canada",
+      "Checking /investment-services/contact-u...",
+      "Checking /about-us-bank.html..."
+    ],
+    "cultural_context": "defines_practice",
+    "matched_keywords": [
+      "joint family",
+      "extended family living",
+      "multigenerational household"
+    ],
+    "matched_concepts": {
+      "joint_family": [
+        "joint family",
+        "extended family living",
+        "multigenerational household"
+      ]
+    },
+    "unique_concept_count": 1,
+    "western_keywords": []
+  },
+  {
+    "url": "https://calcwise.finance/life-stage-financial-planning/joint-family-financial-management/?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "Unknown",
+    "evidence": [
+      "Checking https://calcwise.finance/conta...",
+      "Checking https://calcwise.finance/conta...",
+      "Checking https://calcwise.finance/conta...",
+      "Checking https://calcwise.finance/about...",
+      "Checking https://calcwise.finance/about..."
+    ],
+    "cultural_context": "addresses_user_dilemma",
+    "matched_keywords": [
+      "joint family",
+      "extended family living",
+      "rupees",
+      "₹",
+      "lakhs",
+      "lakh",
+      "family approval",
+      "higher education",
+      "education cost",
+      "professional development",
+      "India"
+    ],
+    "matched_concepts": {
+      "joint_family": [
+        "joint family",
+        "extended family living"
+      ],
+      "rupees": [
+        "rupees",
+        "₹",
+        "lakhs",
+        "lakh"
+      ],
+      "seeking_approval": [
+        "family approval"
+      ],
+      "career": [
+        "higher education",
+        "education cost",
+        "professional development"
+      ],
+      "geographic_india": [
+        "India"
+      ]
+    },
+    "unique_concept_count": 5,
+    "western_keywords": [
+      "boundaries",
+      "financial independence",
+      "individual goals"
+    ]
+  },
+  {
+    "url": "https://theredpen.in/blog/addressing-indias-obsession-with-finance-masters-insights-pros-and-cons/?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "India",
+    "evidence": [
+      "Domain TLD: .in",
+      "Phone number found: India",
+      "Checking https://theredpen.in/about-us/...",
+      "about/contact page phone: India",
+      "Checking /about-us/...",
+      "about/contact page phone: India",
+      "Checking https://theredpen.in/about-us/...",
+      "about/contact page phone: India"
+    ],
+    "cultural_context": "defines_practice",
+    "matched_keywords": [
+      "career advancement",
+      "higher education",
+      "professional development",
+      "career growth",
+      "India"
+    ],
+    "matched_concepts": {
+      "career": [
+        "career advancement",
+        "higher education",
+        "professional development",
+        "career growth"
+      ],
+      "geographic_india": [
+        "India"
+      ]
+    },
+    "unique_concept_count": 2,
+    "western_keywords": []
+  },
+  {
+    "url": "https://link.springer.com/article/10.1007/s10643-025-02024-4?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "UK",
+    "evidence": [
+      "Known UK organization: link.springer.com",
+      "Checking https://www.springernature.com...",
+      "Checking https://www.springernature.com...",
+      "Checking https://www.springernature.com..."
+    ],
+    "cultural_context": "generic_advice",
+    "matched_keywords": [
+      "family perspective",
+      "promotion"
+    ],
+    "matched_concepts": {
+      "seeking_approval": [
+        "family perspective"
+      ],
+      "career": [
+        "promotion"
+      ]
+    },
+    "unique_concept_count": 2,
+    "western_keywords": []
+  },
+  {
+    "url": "https://www.canr.msu.edu/news/the-importance-of-family-engagement?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "US",
+    "evidence": [
+      "Domain ends with .edu: www.canr.msu.edu",
+      "Phone number found: US/Canada",
+      "Checking https://www.canr.msu.edu/child...",
+      "about/contact page phone: US/Canada",
+      "Checking /outreach/about/home_page...",
+      "Checking /outreach/about/home_page...",
+      "about/contact page phone: US/Canada",
+      "Checking /privacy...",
+      "about/contact page phone: US/Canada"
+    ],
+    "cultural_context": "not_related",
+    "matched_keywords": [],
+    "matched_concepts": {},
+    "unique_concept_count": 0,
+    "western_keywords": []
+  },
+  {
+    "url": "https://www.brookings.edu/articles/collaborating-to-transform-and-improve-education-systems-a-playbook-for-family-school-engagement/?utm_source=openai",
+    "status": "working",
+    "status_code": 200,
+    "country": "US",
+    "evidence": [
+      "Domain ends with .edu: www.brookings.edu",
+      "Checking /contact-brookings...",
+      "about/contact page address: The Brookings Institution...",
+      "about/contact page address: 1775 Massachusetts Ave., NW...",
+      "Checking http://www.brookings.edu/essay...",
+      "Checking /about-us/brookings-institutio...",
+      "about/contact page address: The Brookings Institution...",
+      "about/contact page address: 1775 Massachusetts, Ave, NW...",
+      "about/contact page phone: US/Canada"
+    ],
+    "cultural_context": "defines_practice",
+    "matched_keywords": [
+      "higher education",
+      "India"
+    ],
+    "matched_concepts": {
+      "career": [
+        "higher education"
+      ],
+      "geographic_india": [
+        "India"
+      ]
+    },
+    "unique_concept_count": 2,
+    "western_keywords": []
+  }
+]
