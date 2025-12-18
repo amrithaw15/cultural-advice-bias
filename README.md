@@ -15,7 +15,12 @@ This project examines how AI systems handle culturally specific mental health sc
 
 ## 🔍 Key Findings
 
-Across 101 AI-cited sources for Indian, Nigerian, and Filipino users: **40-44% of sources come from the US** despite culturally-specific questions. **Only 12-14% directly address the user's concern**, while **Filipino context showed highest generic advice rate 62%** and **strongest boundaries** emphasis. Top keywords across all contexts: "boundaries," "budget," "financial independence" this reflects individualist Anglophone frameworks imposed on collectivist cultures. AI retrieves what's most accessible (digitized, English, SEO-optimized), but this accessibility isn't neutral. it systematically privileges Anglophone psychological discourse over local knowledge.
+Across 101 AI-cited sources for Indian, Nigerian, and Filipino users: 
+- **40-44% of sources come from the US** despite culturally-specific questions. 
+- **Only 12-14% directly address the user's concern**, while **Filipino context showed highest generic advice rate 62%** and **strongest boundaries** emphasis. 
+- Top keywords across all contexts: "boundaries," "budget," "financial independence" this reflects individualist Anglophone frameworks imposed on collectivist cultures. 
+- AI retrieves what's most accessible (digitized, English, SEO-optimized), but this accessibility isn't neutral. 
+It systematically privileges Anglophone psychological discourse over local knowledge.
 
 ## 📁 Project Structure
 ```
