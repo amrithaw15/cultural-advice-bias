@@ -25,6 +25,7 @@ It systematically privileges Anglophone psychological discourse over local knowl
 ## 📁 Project Structure
 ```
 cultural-advice-bias/
+cli.py # Unified command-line entrypoint for running evals and/or visualization
 ├── epistemic_violence_visualization.html   # Main visualization interface
 ├── start_server_fixs.py                    # Local server to run the visualization
 │
@@ -130,25 +131,31 @@ OPENAI_API_KEY=your_api_key_here
 
 **⚠️ Important:** Never commit your `.env` file or API keys to GitHub!
 
-### 4. Run the Analysis (Optional)
+### 4. Run the Analysis and Visualization
+Pre-generated results are included in the repository. You only need to run the analysis if you want to regenerate results or test a specific region.
 
-If you want to generate fresh results:
+Run full evaluation (all regions) and start visualization.
+This runs the Filipino, Indian, and Nigerian analyses and then launches the visualization server.
 ```bash
-# Run analysis for each cultural group
-python filipino_main_therapy_bias.py
-python indian_main_therapy_bias.py
-python nigerian_main_therapy_bias.py
+python cli.py --serve
 ```
 
-This will generate/update the JSON result files.
-
-**Note:** Pre-generated results are included, so this step is optional unless you want to re-run the analysis.
-
-### 5. Start the Visualization
+Visualize existing results only (no re-run)
+Use this if you only want to explore the results already included in the repository.
 ```bash
-python start_server_fixs.py
+python cli.py --visualize
 ```
 
+Run evaluation for a single region (no visualization)
+```bash
+python cli.py --region indian
+```
+Available regions:
+filipino
+indian
+nigerian
+
+This updates the corresponding JSON result file for the selected region.
 Then open your browser to the URL shown (typically `http://localhost:8000`)
 
 ## 🎨 Features
